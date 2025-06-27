@@ -27,7 +27,7 @@ namespace Framework
             GameObject obj = dataStack.Pop();
             obj.SetActive(true);
 #if UNITY_EDITOR
-            obj.transform.parent = null;
+            obj.transform.SetParent(null);
 #endif
             return obj;
         }
@@ -41,7 +41,7 @@ namespace Framework
             dataStack.Push(obj);
             obj.SetActive(false);
 #if UNITY_EDITOR
-            obj.transform.parent = rootObj.transform;
+            obj.transform.SetParent(rootObj.transform);
 #endif
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Framework
 #if UNITY_EDITOR
             rootObj = new GameObject(name);
             if (poolObj != null)
-                rootObj.transform.parent = poolObj.transform;
+                rootObj.transform.SetParent(poolObj.transform);
 #endif
             dataStack = new Stack<GameObject>();
         }
