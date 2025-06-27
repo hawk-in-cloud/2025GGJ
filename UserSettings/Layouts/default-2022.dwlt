@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 74
+  controlID: 85
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 75
+  controlID: 86
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 42
+  controlID: 87
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PlasticWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -270,9 +270,9 @@ MonoBehaviour:
     y: 375.2
     width: 1124
     height: 355.59998
-  m_MinSize: {x: 601, y: 371}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
@@ -281,8 +281,8 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
-  m_Selected: 2
-  m_LastSelected: 6
+  m_Selected: 6
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -450,7 +450,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1cf3ffff
+      m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1394,7 +1394,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes/Tests
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1402,16 +1402,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/01_Scripts/UI
+  - Assets/Scenes/Tests
   m_LastFoldersGridSize: 50
-  m_LastProjectPath: F:\Unity\Unity files\GGj2025\GGj2025
+  m_LastProjectPath: F:\Unity\Unity files\4_Shader\GGj_2025_2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b4580000
-    m_LastClickedID: 22708
-    m_ExpandedIDs: 
+    m_SelectedIDs: a6700000
+    m_LastClickedID: 28838
+    m_ExpandedIDs: 000000009a7000009c700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1464,8 +1464,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: bc580000
-    m_LastClickedInstanceID: 22716
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004063000076620000c45d00007e600000726e00001c7d0000225a0000f25a0000e0630000c6670000b6c1ffff787300002a7a0000ea71000004700000a2cd0000967800000c7700001a7800001e720000f67200004c72000032770000185b000082870000d0870000ae870000308e00006c8d00007eb800007e5a00006c8f0000de570000c4580000d69000005ed0000066220100ee430100c0570100f25501004e680100f45d00006cb30000025e00008ec20100006700005476000070da00007ec9000066d800008c600000c0ee000048fe0000ae5d0000b446010092600000d8f0000076f900006a710000c080000008810000f6800000ac8000008e800000cc800000529d0000b47c0000567e0000807e0000a47d00000e8000005a7d0000587d0000567d0000a480000076830000988300009c830000ca83000072850000a2850000de850000bc850000c07f0000e87f0000ce7d00004e7700008669000076680000f6690000e6690000ea690000c6430100dc590100847c0000367e0000887c00008890ffff8cb10000aab10000000000002a040000c87a00000a6c0000467200006875000046840000b0b5000022020100446d0000e6670000c855ffff02c20000426d0000e6c100000ec20000
     m_RenameOverlay:
