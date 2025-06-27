@@ -1,0 +1,10 @@
+# Unity 不应加入版本控制的文件夹
+Library/
+Logs/
+Temp/
+Obj/
+UserSettings/
+.vs/
+*.csproj
+*.sln
+*.user
