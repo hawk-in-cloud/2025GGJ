@@ -55,7 +55,7 @@ public class Fur_Base : MonoBehaviour
             {
                 this.isActive = true;
                 sp.color = Color.white;
-                EventManager.Instance.EventTrigger(E_EventType.E_Exp_EndLevelUp);
+                LevelManager.Instance.ExitLevelUpMode();
             }
         }
         else
