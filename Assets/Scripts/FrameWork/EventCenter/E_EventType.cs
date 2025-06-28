@@ -5,6 +5,9 @@ using UnityEngine;
 public enum E_EventType
 {
     E_Monster_Dead,
+    E_Monster_Generate,
+    E_GameItem_Dead,
+    E_GameItem_Generate,
     E_Player_GetRewa,
     E_Test,
 
@@ -17,7 +20,12 @@ public enum E_EventType
     E_Spawn,
     E_Destroy,
 
-    // ÅÐ¶¨
+    // beat
     E_Beat_Success,
     E_Beat_Failure,
+
+    // exp
+    E_Exp_GetExp,
+    E_Exp_EnterLevelUp,
+    E_Exp_EndLevelUp,
 }

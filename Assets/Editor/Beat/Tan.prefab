@@ -90,4 +90,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   moveSpeed: 700
-  destroyOffset: 100
+  destroyOffset: 150
