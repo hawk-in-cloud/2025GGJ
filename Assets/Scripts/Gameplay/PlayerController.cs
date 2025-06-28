@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             animator.Play("Attack", 0, 0f);
             CircleShockTrigger.Instance.TriggerCircleShock(transform);
             GameObject obj = PoolManager.Instance.GetObj("VFX", "dirt");
-            obj.transform.SetParent(transform, false);
+            obj.transform.position = new Vector2(transform.position.x - 0.3f, transform.position.y - 1.5f);
             // ¹¥»÷Âß¼­
             switch (type)
             {
