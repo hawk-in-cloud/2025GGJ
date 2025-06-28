@@ -38,13 +38,13 @@ public class PlayerController : MonoBehaviour
             switch (type)
             {
                 case E_RatatanType.Ra:
-
+                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
                 case E_RatatanType.Ta:
-
+                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
                 case E_RatatanType.Tan:
-
+                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
             }
         });
