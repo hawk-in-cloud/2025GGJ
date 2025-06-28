@@ -9,10 +9,10 @@ public class Fur_Base : MonoBehaviour
     public float scaleFactor = 1.2f;
     public float scaleSpeed = 5f; // 放大缩小的速度
 
-    Vector3 originalScale; // 原始大小
-    SpriteRenderer sp;
-    Animator animator;
-    Tween shakeTween; // 用于保存摇晃的Tween
+    protected Vector3 originalScale; // 原始大小
+    protected SpriteRenderer sp;
+    protected Animator animator;
+    protected Tween shakeTween; // 用于保存摇晃的Tween
 
     private void Awake()
     {
@@ -53,7 +53,8 @@ public class Fur_Base : MonoBehaviour
             {
                 shakeTween = transform.DOLocalRotate(new Vector3(0, 0, 10f), 0.2f, RotateMode.LocalAxisAdd)
                     .SetLoops(-1, LoopType.Yoyo)
-                    .SetUpdate(true); // 让Tween在不受TimeScale影响的情况下更新
+                    .SetUpdate(true) // 让Tween在不受TimeScale影响的情况下更新
+                    .OnKill(() => transform.localRotation = Quaternion.Euler(0, 0, 0)); // 动画结束后重置Z轴角度
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -61,6 +62,7 @@ public class Fur_Base : MonoBehaviour
                 this.isActive = true;
                 sp.color = Color.white;
                 LevelManager.Instance.ExitLevelUpMode();
+                animator.Play("Idle");
             }
         }
         else
@@ -68,10 +70,11 @@ public class Fur_Base : MonoBehaviour
             // 鼠标离开时，恢复到原始大小
             transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.unscaledDeltaTime * scaleSpeed);
 
-            // 停止摇晃动画
+            // 停止摇晃动画并重置Z轴旋转
             if (shakeTween != null && shakeTween.IsPlaying())
             {
-                shakeTween.Kill();
+                shakeTween.Kill(); // 结束动画
+                transform.localRotation = Quaternion.Euler(0, 0, 0); // 重置Z轴旋转
             }
         }
     }

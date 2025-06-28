@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 515811da9adc7124a8d4fce00088fb28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9c139e4c8d62144b85b4b0d97c8523e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -479,9 +479,9 @@ GameObject:
   m_Component:
   - component: {fileID: 878661289}
   - component: {fileID: 878661288}
-  - component: {fileID: 878661290}
   - component: {fileID: 878661291}
   - component: {fileID: 878661292}
+  - component: {fileID: 878661293}
   m_Layer: 0
   m_Name: Furniture
   m_TagString: Untagged
@@ -556,23 +556,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &878661290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878661287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16dcb38bf2611a34ea551635b5f0b7a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  scaleFactor: 1.2
-  scaleSpeed: 5
-  shakeAngle: 30
-  shakeDuration: 0.2
 --- !u!61 &878661291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -639,6 +622,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &878661293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878661287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a444a305ab3604bbde1f4c84bfc7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  scaleFactor: 1.2
+  scaleSpeed: 5
 --- !u!1 &1203299780
 GameObject:
   m_ObjectHideFlags: 0
