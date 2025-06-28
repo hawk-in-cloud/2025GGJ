@@ -21,12 +21,31 @@ public class Fur_AttackObj : MonoBehaviour
         attackDamage = damage;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.CompareTag("Enemy")) // 用 Tag 判断
+        {
+            // 如果已经打中过，就不再重复攻击（可注释此段表示同一个敌人可多次被打）
+            if (hitEnemies.Contains(other.gameObject)) return;
+
+            hitEnemies.Add(other.gameObject);
+
+            // 示例：调用敌人脚本的受伤函数
+            BaseMonster enemy = other.collider.GetComponent<BaseMonster>();
+            if (enemy != null)
+            {
+                enemy.Injured(attackDamage);
+                Fur_Base fur_Base = transform.parent.GetComponent<Fur_Base>();
+                MonsterMgr.Instance.MonsterRePell(transform.parent, fur_Base);
+                Debug.Log($"{transform.parent.name} 击中 {other.collider.name}，造成 {attackDamage} 点伤害");
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("attackTri");
         if (other.CompareTag("Enemy")) // 用 Tag 判断
         {
-            Debug.Log("enemy");
             // 如果已经打中过，就不再重复攻击（可注释此段表示同一个敌人可多次被打）
             if (hitEnemies.Contains(other.gameObject)) return;
 
@@ -39,7 +58,7 @@ public class Fur_AttackObj : MonoBehaviour
                 enemy.Injured(attackDamage);
                 Fur_Base fur_Base = transform.parent.GetComponent<Fur_Base>();
                 MonsterMgr.Instance.MonsterRePell(transform.parent, fur_Base);
-                Debug.Log($"击中 {other.name}，造成 {attackDamage} 点伤害");
+                Debug.Log($"{transform.parent.name} 击中 {other.name}，造成 {attackDamage} 点伤害");
             }
         }
     }
