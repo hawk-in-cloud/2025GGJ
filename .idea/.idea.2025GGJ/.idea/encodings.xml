@@ -5,6 +5,11 @@
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Enemy/GridManager.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/FrameWork/AudioManager/AudioManager.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/FrameWork/EventCenter/EventManager.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/DelayRemove.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Base.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerController.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/LoadPanel.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" charset="GB2312" />
   </component>
 </project>

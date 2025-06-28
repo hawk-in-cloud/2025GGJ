@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5438147277675528255}
   - component: {fileID: 6038406708762620502}
   - component: {fileID: 4727369275697573358}
-  - component: {fileID: -4058627829769688371}
   m_Layer: 3
   m_Name: monster1
   m_TagString: Untagged
@@ -49,9 +48,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ed39a17828423f82075084fd4b96b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  attack: 0
+  health: 100
+  attack: 50
   speed: 0
+  attackInterval: 0
+  target: {fileID: 0}
+  moveSpeed: 1
+  detectionRange: 1
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxStuckTime: 1.2
+  escapeAngle: 135
+  escapeBoost: 1.5
 --- !u!95 &3261866155013691609
 Animator:
   serializedVersion: 5
@@ -197,24 +206,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4058627829769688371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843638336422525070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff07c8c94894144ad58b4090900c69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  moveSpeed: 2
-  detectionRange: 1
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 64
-  maxStuckTime: 1.2
-  escapeAngle: 135
-  escapeBoost: 1.5

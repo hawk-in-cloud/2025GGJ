@@ -1,38 +1,57 @@
-﻿using System.Linq;
+﻿﻿using System.Collections.Generic;
+ using System.Linq;
 using Framework;
 using Gameplay.BaseItem;
-using Gameplay.Other;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Gameplay
 {
     public class MonsterMgr : SingletonMono<MonsterMgr>
     {
-        //Props的父物体
-        public Transform propsParent;
-        //怪物的父物体
-        public Transform monsterParent;
-        //怪物的当前数量
-        public int monsterCount;
+        
+        private Transform _monsterParent;
+
+        private Transform _furParent;
+        //所有的怪物
+        public List<BaseMonster> allMonsters = new List<BaseMonster>();
+        
         void Awake()
         {
-            EventManager.Instance.AddEventListener(E_EventType.E_Monster_Dead, () =>
+            EventManager.Instance.AddEventListener<BaseMonster>(E_EventType.E_Monster_Dead, (monster) =>
             {
-                monsterCount--;
+                allMonsters.Remove(monster);
             });
-            EventManager.Instance.AddEventListener(E_EventType.E_Monster_Generate, () =>
+            EventManager.Instance.AddEventListener<BaseMonster>(E_EventType.E_Monster_Generate, (monster) =>
             {
-                monsterCount++;
+                allMonsters.Add(monster);
+            });
+            EventManager.Instance.AddEventListener(E_EventType.E_GameItem_Dead, () =>
+            {
+                foreach (var monster in allMonsters)
+                {
+                    monster.target = ReturnNearestProps(monster);
+                }
             });
         }
 
         void Start()
         {
-            for (int i = 0; i < 50; i++)
+            _monsterParent = new GameObject("MonsterParent").transform;
+            _furParent = new GameObject("FurParent").transform;
+        }
+
+        /// <summary>
+        /// 生成怪物
+        /// </summary>
+        /// <param name="count"></param>
+        public void GenerateMonster(int count)
+        {
+            for (int i = 0; i < count; i++)
             {
-                var monster = PoolManager.Instance.GetObj("GameObject", RandomGetMonster());
+                var monster = PoolManager.Instance.GetObj("GameObject/Monster", RandomGetMonster());
                 monster.transform.position = GetRandomSpawnPosition();
-                monster.transform.parent = transform;
+                monster.transform.parent = _monsterParent;
             }
         }
         /// <summary>
@@ -92,29 +111,17 @@ namespace Gameplay
         }
 
         /// <summary>
-        /// 清理
-        /// </summary>
-        private void OnDestroy()
-        {
-            EventManager.Instance.RemoveEventListener(E_EventType.E_Monster_Dead, () =>
-            {
-                monsterCount--;
-            });
-            EventManager.Instance.RemoveEventListener(E_EventType.E_Monster_Generate, () =>
-            {
-                monsterCount++;
-            });
-        }
-
-        /// <summary>
         /// 返回距离 monster 最近的 Props（道具）Transform
         /// </summary>
         /// <param name="monster">怪物自身</param>
         /// <returns>最近的 Props 的 Transform，没有返回 null</returns>
-        public Transform ReturnNearestProps(MonsterAI monster)
+        public Transform ReturnNearestProps(BaseMonster monster)
         {
-            // 查找场景中所有带标签的 Props 对象
-            GameObject[] propsList = GameObject.FindGameObjectsWithTag("Player");
+            // 查找子物体中所有带标签的 player的对象
+            var propsList = GameObject.FindGameObjectsWithTag("Player");
+            
+            //查找
+            propsList = propsList.Where(obj => obj.GetComponent<Fur_Base>().isActive).ToArray();
             if (propsList.Length == 0)
                 return null;
 

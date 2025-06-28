@@ -5,53 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b84eb1d-524b-4c60-b56e-c0d3e1c12889" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseProp.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseProp.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster1.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Other/MonsterAI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Other/MonsterAI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Main.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Main.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Obj.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/monster3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests/UIText_XZ.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests/UIText_XZ.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameWork/EventCenter/E_EventType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameWork/EventCenter/E_EventType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d9/d9087cbd562c30546d7232a5d82908f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseProp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseProp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Base.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Base.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster1.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Monsters/Monster3.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Other/MonsterAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Other/MonsterAI.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe12.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe13.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe14.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe15.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -78,7 +88,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51464d63a43c46d49c36f85855d16b9827800/44/4b0e1ec3/Animator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/24/37cc8cdb/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/3f/31c01f01/UnityAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/7b/3e8517dc/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/95/50ed0e2c/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Obj/Fur/Fur3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -103,7 +118,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "E5Note",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,6 +188,7 @@
       <updated>1751029066349</updated>
       <workItem from="1751029067615" duration="14211000" />
       <workItem from="1751061067366" duration="8893000" />
+      <workItem from="1751072275907" duration="22844000" />
     </task>
     <servers />
   </component>

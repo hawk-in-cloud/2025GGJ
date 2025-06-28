@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 9100468311630049991}
   - component: {fileID: 3261866155013691609}
   - component: {fileID: 5438147277675528255}
-  - component: {fileID: 2709525837613476070}
-  - component: {fileID: 1088911124443655691}
-  - component: {fileID: 3929367914448891619}
-  - component: {fileID: 3466167738474573624}
+  - component: {fileID: 3897186274374437392}
+  - component: {fileID: 2868002684365032493}
+  - component: {fileID: -3365483552627263961}
   m_Layer: 3
-  m_Name: monster3
+  m_Name: monster2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +46,7 @@ Animator:
   m_GameObject: {fileID: 7843638336422525070}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: df1c8eb2c0536674498b7cf441f2a95c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 1131bed35de888c4c93d18b311263ff1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,7 +109,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2709525837613476070
+--- !u!114 &3897186274374437392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,13 +118,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 7843638336422525070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67fa47c7667e426991458a48c84611f4, type: 3}
+  m_Script: {fileID: 11500000, guid: dbb48f5e56e546468db75cb0532b9ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  attack: 0
+  health: 100
+  attack: 50
   speed: 0
---- !u!61 &1088911124443655691
+  attackInterval: 0
+  target: {fileID: 0}
+  moveSpeed: 1
+  detectionRange: 1
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxStuckTime: 1.2
+  escapeAngle: 135
+  escapeBoost: 1.5
+--- !u!61 &2868002684365032493
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +179,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &3929367914448891619
+--- !u!50 &-3365483552627263961
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -197,24 +206,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3466167738474573624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843638336422525070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff07c8c94894144ad58b4090900c69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  moveSpeed: 2
-  detectionRange: 1
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 64
-  maxStuckTime: 1.2
-  escapeAngle: 135
-  escapeBoost: 1.5
