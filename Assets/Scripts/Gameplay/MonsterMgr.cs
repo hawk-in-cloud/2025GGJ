@@ -2,6 +2,7 @@
  using System.Linq;
 using Framework;
 using Gameplay.BaseItem;
+using Gameplay.Obj;
 //using Gameplay.Obj.Fur;
 using UnityEngine;
 using UnityEngine.Events;
@@ -113,6 +114,7 @@ namespace Gameplay
             return monsterNames[index];
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         /// <summary>
         /// 返回距离 monster 最近的 Props（道具）Transform
         /// </summary>
@@ -122,26 +124,42 @@ namespace Gameplay
         {
             // 查找子物体中所有带标签的 player的对象
             var propsList = GameObject.FindGameObjectsWithTag("Player");
-            
-            //查找活跃的
-            propsList = propsList.Where(obj =>
+            List<GameObject> findList = new List<GameObject>();
+            foreach (var obj in propsList)
             {
-                if (obj.GetComponent<Fur_Base>())
+                if (obj.GetComponent<Fur_Base>() != null && obj.GetComponent<Fur_Base>().isActive)
                 {
-                    obj.GetComponent<Fur_Base>().isActive = true;
-                    return true;
+                    findList.Add(obj);
+                    continue;
                 }
 
-                if (obj.GetComponent<PlayerController>())
+                if (obj.GetComponent<Girl>() != null)
                 {
-                    return true;
+                    findList.Add(obj);
+                    continue;
                 }
-                return false;
-            }).ToArray();
+            }
+            
+            //查找活跃的
+            // propsList = propsList.Where(obj =>
+            // {
+            //     Debug.Log(obj.name);
+            //     if (obj.GetComponent<Fur_Base>().isActive)
+            //     {
+            //         return true;
+            //     }
+            //     if (obj.GetComponent<Girl>())
+            //     {
+            //         return true;
+            //     }
+            //     return false;
+            // }).ToArray();
+            
             //加入player
-            var propsListNew = new List<GameObject>(propsList);
+            /*var propsListNew = new List<GameObject>(propsList);
             propsListNew.Add(GameObject.Find("Player"));
-            propsList = propsListNew.ToArray();
+            propsList = propsListNew.ToArray();*/
+            
             if (propsList.Length == 0)
                 return null;
 

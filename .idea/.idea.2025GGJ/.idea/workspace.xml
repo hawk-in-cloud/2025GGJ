@@ -7,23 +7,66 @@
     <list default="true" id="5b84eb1d-524b-4c60-b56e-c0d3e1c12889" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Injured.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Injured.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Injured.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Injured.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Dead.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Dead.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Injured.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Injured.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Dead.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Dead.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Injured.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Injured.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Dead.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Dead.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Injured.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Injured.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Dead.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Dead.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Injured.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Injured.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animator/BaseProp.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animator/BaseProp.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Cabinet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Cabinet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Clock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Clock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Mirror.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Mirror.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Shafa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Shafa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Fur/Props3.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RemoveAfterAnim.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RemoveAfterAnim.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests/Racio_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests/Racio_Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Clock.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Clock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Mirror.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Mirror.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Shafa.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Shafa.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Other.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +95,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/7b/3e8517dc/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880d0decab764136918c677520316d08175600/95/50ed0e2c/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Obj/Fur/Fur3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shader/熊_震荡波/CircleShockTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -72,22 +114,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\work\unity\unityIDE\2022.3.20f1c1\Editor\Unity.exe" />
@@ -150,6 +192,7 @@
       <workItem from="1751029067615" duration="14211000" />
       <workItem from="1751061067366" duration="8893000" />
       <workItem from="1751072275907" duration="22844000" />
+      <workItem from="1751134857991" duration="6727000" />
     </task>
     <servers />
   </component>

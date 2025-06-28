@@ -176,7 +176,7 @@ namespace Gameplay.BaseItem
             if (moveDir.x != 0)
             {
                 Vector3 localScale = transform.localScale;
-                localScale.x = Mathf.Abs(localScale.x) * (moveDir.x > 0 ? 1 : -1);
+                localScale.x = Mathf.Abs(localScale.x) * (moveDir.x > 0 ? -1 : 1);
                 transform.localScale = localScale;
             }
         }
