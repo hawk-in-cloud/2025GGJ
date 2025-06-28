@@ -2,11 +2,6 @@ using DG.Tweening;
 using Framework;
 using Gameplay;
 using Gameplay.BaseItem;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 public class Fur_Base : MonoBehaviour
 {
@@ -22,9 +17,6 @@ public class Fur_Base : MonoBehaviour
     public int health;
     //攻击力
     public int attack;
-    //攻击间隔
-    public float attackInterval = 1f;
-    public bool canAttack = true;
     private float _tempAttackTime;
     
     Vector3 originalScale; // 原始大小
@@ -32,13 +24,13 @@ public class Fur_Base : MonoBehaviour
     // 引用组件
     protected Animator _anim;
     private SpriteRenderer sp;
-    private BoxCollider2D _col;
+    private Collider2D _col;
 
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
-        _col = GetComponent<BoxCollider2D>();
+        _col = GetComponent<Collider2D>();
         originalScale = transform.localScale;
         isActive = false;
         sp.color = Color.gray;
@@ -48,7 +40,6 @@ public class Fur_Base : MonoBehaviour
 
     protected virtual void Start()
     {
-
         if (isActive)
         {
             //启用碰撞体
@@ -139,17 +130,13 @@ public class Fur_Base : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            _anim.SetBool("Dead", true);
-          
+            _anim.Play("Injured",0,0);
+            
             //失活碰撞体
             _col.enabled = false;
-            
-            var deadTime = MonsterMgr.Instance.GetAnimLength(_anim,"Dead");
-            Invoke("Die", deadTime);
             monster.target = MonsterMgr.Instance.ReturnNearestProps(monster);
-            return;
+            Die();
         }
-        _anim.SetTrigger("Injured");
     }
     
     // 处理物品死亡时的逻辑

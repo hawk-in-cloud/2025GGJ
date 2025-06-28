@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  attack: 50
+  attack: 5
   speed: 1
   attackInterval: 0.3
   target: {fileID: 0}
@@ -130,6 +130,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
+  stopDistance: 1
   maxStuckTime: 1.2
   escapeAngle: 135
   escapeBoost: 1.5

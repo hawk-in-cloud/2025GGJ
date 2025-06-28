@@ -1,5 +1,6 @@
 ﻿using System;
 using Framework;
+using Gameplay.Obj.Fur;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -30,8 +31,6 @@ namespace Gameplay.BaseItem
         
         [Header("追击停止距离")]
         public float stopDistance = 1f;
-        
-
 
         [Header("卡住处理")]
         public float maxStuckTime = 1.2f;

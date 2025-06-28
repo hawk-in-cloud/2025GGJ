@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: canbinet
+  m_Controller: {fileID: 9100000, guid: 3dc3c0c2cd09989468fdf77486657053, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9ceb19abebe7ba34cad161b1ee579a61, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f4aa6e30172b21747b7ab6cc61109818, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cc85edb6ba6992d48b06d157cf3b57fb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cabdb838750a61e41a4082d72e5e04d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b0ec7c5e45a525140b88df6a50d000a1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b0ec7c5e45a525140b88df6a50d000a1, type: 2}

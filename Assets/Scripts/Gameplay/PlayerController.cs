@@ -129,40 +129,36 @@ public class PlayerController : MonoBehaviour
 
     public void Movement()
     {
-        // 获取输入方向
         Vector2 inputDirection = new Vector2(moveX, moveY).normalized;
-
-        // 计算目标速度
         Vector2 targetVelocity = inputDirection * maxSpeed;
 
-        if (targetVelocity != Vector2.zero)
-        {
-            animator.SetBool("Run", true);
-        }
-        else
-        {
-            animator.SetBool("Run", false);
-        }
+        animator.SetBool("Run", targetVelocity != Vector2.zero);
 
-        // 平滑加速/减速
         if (inputDirection != Vector2.zero)
         {
-            // 有输入时加速
             currentVelocity = Vector2.MoveTowards(
                 currentVelocity,
                 targetVelocity,
                 acceleration * Time.deltaTime);
+
+            // === 左右翻转 ===
+            if (moveX != 0)
+            {
+                Vector3 scale = transform.localScale;
+                scale.x = moveX > 0 ? -1f : 1f;  // 向右翻转
+                transform.localScale = scale;
+            }
         }
         else
         {
-            // 无输入时减速
             currentVelocity = Vector2.MoveTowards(
                 currentVelocity,
                 Vector2.zero,
                 deceleration * Time.deltaTime);
         }
 
-        // 应用移动
         rb.MovePosition(rb.position + currentVelocity * Time.fixedDeltaTime);
     }
+
+
 }

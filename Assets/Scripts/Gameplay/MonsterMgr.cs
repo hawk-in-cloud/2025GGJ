@@ -2,6 +2,7 @@
  using System.Linq;
 using Framework;
 using Gameplay.BaseItem;
+using Gameplay.Obj.Fur;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -161,5 +162,41 @@ namespace Gameplay
             return nearest;
         }
 
+        /// <summary>
+        /// 击退力的大小
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="fur"></param>
+        public void MonsterRePell(Transform item, Fur_Base fur)
+        {
+            // 1. 计算方向（攻击源 → 怪物），并归一化
+            Vector2 direction = (transform.position - item.position).normalized;
+
+            // 2. 获取击退力度，默认值
+            float force = 3f;
+
+            // 3. 根据 Fur_Base 的子类类型判断
+            if (fur is Fur_Clock)
+            {
+                force = 2f;
+            }
+            else if (fur is Fur_Cabinet)
+            {
+                force = 3f;
+            }
+            else if (fur is Fur_Shafa)
+            {
+                force = 5f;
+            }
+            else if (fur is Fur_Mirror)
+            {
+                force = 6f;
+            }
+            var rb = item.gameObject.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.AddForce(direction * force, ForceMode2D.Impulse);
+            }
+        }
     }
 }

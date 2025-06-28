@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5940583966733650336}
   m_Layer: 0
   m_Name: Clock
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ Animator:
   m_GameObject: {fileID: 5457643292157371747}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1da771c4573d844fb9c134a9909a4ec, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8dda38a9b181b744b9b9f00edd7a48a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   isActive: 0
   scaleFactor: 1.2
   scaleSpeed: 5
-  health: 0
+  health: 100
   attack: 0
   attackInterval: 1
   canAttack: 1

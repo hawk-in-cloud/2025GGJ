@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 491071181290471461}
   m_Layer: 0
   m_Name: Mirror
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 6282917841832133597}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d60bc92aaefd2364db7524fb056bf7ac, type: 2}
+  m_Controller: {fileID: 22100000, guid: 264127332862cb64bbdd38418543cf67, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   isActive: 0
   scaleFactor: 1.2
   scaleSpeed: 5
-  health: 0
+  health: 100
   attack: 0
   attackInterval: 1
   canAttack: 1
