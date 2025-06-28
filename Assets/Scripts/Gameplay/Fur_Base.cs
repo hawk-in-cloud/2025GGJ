@@ -14,6 +14,7 @@ public class Fur_Base : MonoBehaviour
 
     Vector3 originalScale; // 原始大小
     SpriteRenderer sp;
+    Animator animator;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class Fur_Base : MonoBehaviour
         originalScale = transform.localScale; // 记录物体的初始大小
         isActive = false;
         sp.color = Color.gray;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
