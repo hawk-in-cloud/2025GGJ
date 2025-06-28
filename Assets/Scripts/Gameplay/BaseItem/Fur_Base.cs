@@ -1,9 +1,11 @@
-using System;
+using DG.Tweening;
 using Framework;
-using System.Collections;
-using System.Collections.Generic;
 using Gameplay;
 using Gameplay.BaseItem;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 public class Fur_Base : MonoBehaviour
@@ -25,18 +27,19 @@ public class Fur_Base : MonoBehaviour
     public bool canAttack = true;
     private float _tempAttackTime;
     
-    Vector3 _originalScale; // 原始大小
+    Vector3 originalScale; // 原始大小
     
     // 引用组件
-    public Animator _anim;
+    protected Animator _anim;
     private SpriteRenderer sp;
     private BoxCollider2D _col;
+
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
         _col = GetComponent<BoxCollider2D>();
-        _originalScale = transform.localScale;
+        originalScale = transform.localScale;
         isActive = false;
         sp.color = Color.gray;
         
@@ -45,6 +48,7 @@ public class Fur_Base : MonoBehaviour
 
     protected virtual void Start()
     {
+
         if (isActive)
         {
             //启用碰撞体
@@ -70,33 +74,50 @@ public class Fur_Base : MonoBehaviour
     {
         
     }
-    
+
+    Tween shakeTween;
+
     // 处理鼠标悬停时的逻辑
     public void OnHover()
     {
-        // 
+        // 获取鼠标在世界空间的位置
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (LevelManager.Instance.isLevelUp)
-            Debug.Log($"{GetComponent<Collider2D>() != null}" +
-                $"{GetComponent<Collider2D>().bounds.Contains(mousePosition)}");
-
-        // 
+        // 检查鼠标是否在物体上
         if (GetComponent<Collider2D>() != null && GetComponent<Collider2D>().bounds.Contains(mousePosition) && LevelManager.Instance.isLevelUp)
         {
-            // 
-            transform.localScale = Vector3.Lerp(transform.localScale, _originalScale * scaleFactor, Time.unscaledDeltaTime * scaleSpeed);
+            // 鼠标悬停时，放大物体
+            transform.localScale = Vector3.Lerp(transform.localScale, originalScale * scaleFactor, Time.unscaledDeltaTime * scaleSpeed);
+
+            // 添加摇晃效果（使用DOTween，避免TimeScale的影响）
+            if (shakeTween == null || !shakeTween.IsPlaying())
+            {
+                shakeTween = transform.DOLocalRotate(new Vector3(0, 0, 10f), 0.2f, RotateMode.LocalAxisAdd)
+                    .SetLoops(-1, LoopType.Yoyo)
+                    .SetUpdate(true) // 让Tween在不受TimeScale影响的情况下更新
+                    .OnKill(() => transform.localRotation = Quaternion.Euler(0, 0, 0)); // 动画结束后重置Z轴角度
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 this.isActive = true;
+
                 sp.color = Color.white;
-                EventManager.Instance.EventTrigger(E_EventType.E_Exp_EndLevelUp);
+                LevelManager.Instance.ExitLevelUpMode();
+                _anim.Play("Idle");
             }
         }
         else
         {
-            // 
-            transform.localScale = Vector3.Lerp(transform.localScale, _originalScale, Time.unscaledDeltaTime * scaleSpeed);
+            // 鼠标离开时，恢复到原始大小
+            transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.unscaledDeltaTime * scaleSpeed);
+
+            // 停止摇晃动画并重置Z轴旋转
+            if (shakeTween != null && shakeTween.IsPlaying())
+            {
+                shakeTween.Kill(); // 结束动画
+                transform.localRotation = Quaternion.Euler(0, 0, 0); // 重置Z轴旋转
+            }
         }
     }
 
