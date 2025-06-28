@@ -1,7 +1,4 @@
-using Framework;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using DG.Tweening; // 引入DOTween命名空间
 using UnityEngine;
 
 public class Fur_Base : MonoBehaviour
@@ -15,6 +12,7 @@ public class Fur_Base : MonoBehaviour
     Vector3 originalScale; // 原始大小
     SpriteRenderer sp;
     Animator animator;
+    Tween shakeTween; // 用于保存摇晃的Tween
 
     private void Awake()
     {
@@ -44,15 +42,20 @@ public class Fur_Base : MonoBehaviour
         // 获取鼠标在世界空间的位置
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (LevelManager.Instance.isLevelUp)
-            Debug.Log($"{GetComponent<Collider2D>() != null}" +
-                $"{GetComponent<Collider2D>().bounds.Contains(mousePosition)}");
-
         // 检查鼠标是否在物体上
         if (GetComponent<Collider2D>() != null && GetComponent<Collider2D>().bounds.Contains(mousePosition) && LevelManager.Instance.isLevelUp)
         {
             // 鼠标悬停时，放大物体
             transform.localScale = Vector3.Lerp(transform.localScale, originalScale * scaleFactor, Time.unscaledDeltaTime * scaleSpeed);
+
+            // 添加摇晃效果（使用DOTween，避免TimeScale的影响）
+            if (shakeTween == null || !shakeTween.IsPlaying())
+            {
+                shakeTween = transform.DOLocalRotate(new Vector3(0, 0, 10f), 0.2f, RotateMode.LocalAxisAdd)
+                    .SetLoops(-1, LoopType.Yoyo)
+                    .SetUpdate(true); // 让Tween在不受TimeScale影响的情况下更新
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 this.isActive = true;
@@ -64,6 +67,12 @@ public class Fur_Base : MonoBehaviour
         {
             // 鼠标离开时，恢复到原始大小
             transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.unscaledDeltaTime * scaleSpeed);
+
+            // 停止摇晃动画
+            if (shakeTween != null && shakeTween.IsPlaying())
+            {
+                shakeTween.Kill();
+            }
         }
     }
 }

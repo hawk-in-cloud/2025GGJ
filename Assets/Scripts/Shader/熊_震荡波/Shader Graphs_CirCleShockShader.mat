@@ -57,9 +57,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RingStrenth: -1.1
-    - _Size: 0.05
+    - _Size: 0.04
     - _Speed: 0.93
-    - _WaveDistance: 0.346
+    - _WaveDistance: -0.1
     m_Colors:
     - _RingSpawnPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

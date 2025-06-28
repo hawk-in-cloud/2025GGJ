@@ -32,19 +32,17 @@ public class PlayerController : MonoBehaviour
         {
             // Ïà»úÕð¶¯
             Camera.main.DOShakePosition(0.1f, 0.2f, 10, 90, true);
-
-            animator.Play("Attack");
+            animator.Play("Attack", 0, 0f);
+            CircleShockTrigger.Instance.TriggerCircleShock(transform);
+            //EventManager.Instance.EventTrigger<float>(E_EventType.E_Exp_GetExp, 20f);
             // ¹¥»÷Âß¼­
             switch (type)
             {
                 case E_RatatanType.Ra:
-                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
                 case E_RatatanType.Ta:
-                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
                 case E_RatatanType.Tan:
-                    CircleShockTrigger.Instance.TriggerCircleShock(transform);
                     break;
             }
         });
