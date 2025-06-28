@@ -28,7 +28,7 @@ public class Fur_Base : MonoBehaviour
     Vector3 _originalScale; // 原始大小
     
     // 引用组件
-    private Animator _anim;
+    public Animator _anim;
     private SpriteRenderer sp;
     private BoxCollider2D _col;
     private void Awake()

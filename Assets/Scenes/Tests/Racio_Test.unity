@@ -537,6 +537,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1454556292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454556293}
+  - component: {fileID: 1454556294}
+  m_Layer: 0
+  m_Name: Main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1454556293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454556292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2546017, y: 1.0793407, z: 0.031426243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454556294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454556292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5af83eb7384d6aa7e5cc37f3c5d8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1486624253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1061,7 @@ GameObject:
   - component: {fileID: 1957370229}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1127,7 @@ Transform:
   m_GameObject: {fileID: 1957370224}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.14, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1243,13 +1287,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shafa
       objectReference: {fileID: 0}
+    - target: {fileID: 1635365585483751548, guid: ac1081552ff6cd944a0415ef7dafdffc, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3221753190351779984, guid: ac1081552ff6cd944a0415ef7dafdffc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.43
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 3221753190351779984, guid: ac1081552ff6cd944a0415ef7dafdffc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.17
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 3221753190351779984, guid: ac1081552ff6cd944a0415ef7dafdffc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1300,3 +1348,4 @@ SceneRoots:
   - {fileID: 177505650}
   - {fileID: 1896324414}
   - {fileID: 6306000754818778566}
+  - {fileID: 1454556293}

@@ -9,7 +9,10 @@
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/DelayRemove.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Base.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerController.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Shader/熊_震荡波/CircleShockTrigger.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/LoadPanel.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/RatatanPanel.cs" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/RatatanPanel_Trigger.cs" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" charset="GB2312" />
   </component>
 </project>

@@ -24,9 +24,14 @@ namespace Gameplay.BaseItem
         [Header("寻路设置")]
         public Transform target;
         //移速
-        public float moveSpeed = 1f;
+        private float moveSpeed;
         public float detectionRange = 1f;
         public LayerMask obstacleMask;
+        
+        [Header("追击停止距离")]
+        public float stopDistance = 1f;
+        
+
 
         [Header("卡住处理")]
         public float maxStuckTime = 1.2f;
@@ -50,11 +55,14 @@ namespace Gameplay.BaseItem
         
         protected void Start()
         {
-            //寻路
+            //寻路目标初始化
             if (target == null)
             {
+                //随机寻路目标
                 target = MonsterMgr.Instance.ReturnNearestProps(this);
             }
+            //设置速度
+            moveSpeed = speed;
             lastPosition = rb.position;
             
             //触发事件 -- 怪物的生成注册事件
@@ -110,6 +118,14 @@ namespace Gameplay.BaseItem
         void FixedUpdate()
         {
             if (target == null) return;
+            float distanceToTarget = Vector2.Distance(target.position, transform.position);
+            if (distanceToTarget < stopDistance)
+            {
+                // 靠太近了，不移动，只可攻击
+                rb.velocity = Vector2.zero;
+                return;
+            }
+
 
             Vector2 baseDirection = (target.position - transform.position).normalized;
             Vector2 moveDir = Vector2.zero;
@@ -157,6 +173,13 @@ namespace Gameplay.BaseItem
 
             // === 移动 ===
             rb.MovePosition(rb.position + moveDir.normalized * moveSpeed * Time.fixedDeltaTime);
+            // === 朝向翻转 ===
+            if (moveDir.x != 0)
+            {
+                Vector3 localScale = transform.localScale;
+                localScale.x = Mathf.Abs(localScale.x) * (moveDir.x > 0 ? 1 : -1);
+                transform.localScale = localScale;
+            }
         }
 
         void OnDrawGizmosSelected()
@@ -175,7 +198,6 @@ namespace Gameplay.BaseItem
             
             if (other.gameObject.CompareTag("Player"))
             {
-                print("碰撞");
                 if (!_canAttack) return;
                 _canAttack = false;
                 _attackTempTime = 0;

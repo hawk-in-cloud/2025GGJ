@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2893425981202157986}
   - component: {fileID: 4592471061791930700}
-  - component: {fileID: 6012588580690147192}
   - component: {fileID: 2747776890663242007}
   - component: {fileID: 5306182141407565360}
   - component: {fileID: 8872449231818526965}
   m_Layer: 0
-  m_Name: Props2
+  m_Name: Props1_text
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,25 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6012588580690147192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2698046019922475005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c1ad20fa274751a5b75057b53c14b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 1
-  scaleFactor: 1.2
-  scaleSpeed: 5
-  health: 0
-  attack: 0
-  attackInterval: 1
-  canAttack: 1
 --- !u!61 &2747776890663242007
 BoxCollider2D:
   m_ObjectHideFlags: 0

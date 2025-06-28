@@ -76,7 +76,9 @@ namespace Gameplay
             };
 
             // 随机一个方向
-            return possiblePoints[Random.Range(0, possiblePoints.Length)];
+            Vector3 randomPoint = possiblePoints[Random.Range(0, possiblePoints.Length)];
+            randomPoint.z = 0;
+            return randomPoint;
         }
         
         /// <summary>
@@ -120,8 +122,25 @@ namespace Gameplay
             // 查找子物体中所有带标签的 player的对象
             var propsList = GameObject.FindGameObjectsWithTag("Player");
             
-            //查找
-            propsList = propsList.Where(obj => obj.GetComponent<Fur_Base>().isActive).ToArray();
+            //查找活跃的
+            propsList = propsList.Where(obj =>
+            {
+                if (obj.GetComponent<Fur_Base>())
+                {
+                    obj.GetComponent<Fur_Base>().isActive = true;
+                    return true;
+                }
+
+                if (obj.GetComponent<PlayerController>())
+                {
+                    return true;
+                }
+                return false;
+            }).ToArray();
+            //加入player
+            var propsListNew = new List<GameObject>(propsList);
+            propsListNew.Add(GameObject.Find("Player"));
+            propsList = propsListNew.ToArray();
             if (propsList.Length == 0)
                 return null;
 
