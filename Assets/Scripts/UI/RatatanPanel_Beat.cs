@@ -40,6 +40,7 @@ public class RatatanPanel_Beat : MonoBehaviour
 
         // 销毁
         EventManager.Instance.EventTrigger(E_EventType.E_Destroy);
+        EventManager.Instance.EventTrigger(E_EventType.E_Beat_Failure);
         // 对现池回收
         PoolManager.Instance.PushObj(this.gameObject);
     }
