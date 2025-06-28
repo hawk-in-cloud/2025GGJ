@@ -38,6 +38,7 @@ public class Fur_Clock : Fur_Base
 
         // 3. 跳跃并放大结束后，恢复原始位置和大小
         yield return new WaitForSeconds(0.3f);  // 等待跳跃和放大完成
+        Attack();  // 执行攻击逻辑
         transform.DOLocalMoveY(originalPos.y, 0.2f).SetEase(Ease.InQuad);  // 回到原位置
         transform.DOScale(originalScale, 0.2f).SetEase(Ease.InOutElastic);  // 恢复原大小
     }

@@ -254,7 +254,7 @@ MonoBehaviour:
   isActive: 0
   scaleFactor: 1.2
   scaleSpeed: 5
-  health: 100
+  health: 300
   attack: 9
   CanAttack: 0
   AttackInterval: 0.3
