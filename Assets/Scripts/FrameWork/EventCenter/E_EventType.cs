@@ -5,6 +5,9 @@ using UnityEngine;
 public enum E_EventType
 {
     E_Monster_Dead,
+    E_Monster_Generate,
+    E_GameItem_Dead,
+    E_GameItem_Generate,
     E_Player_GetRewa,
     E_Test,
 
