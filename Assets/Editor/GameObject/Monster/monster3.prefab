@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9100468311630049991}
   - component: {fileID: 3261866155013691609}
   - component: {fileID: 5438147277675528255}
-  - component: {fileID: 2709525837613476070}
   - component: {fileID: 1088911124443655691}
   - component: {fileID: 3929367914448891619}
+  - component: {fileID: -1485982071061851127}
   m_Layer: 3
   m_Name: monster3
   m_TagString: Untagged
@@ -109,30 +109,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2709525837613476070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843638336422525070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67fa47c7667e426991458a48c84611f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  attack: 50
-  speed: 1
-  attackInterval: 0.3
-  target: {fileID: 0}
-  detectionRange: 1
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  maxStuckTime: 1.2
-  escapeAngle: 135
-  escapeBoost: 1.5
 --- !u!61 &1088911124443655691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205,3 +181,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-1485982071061851127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843638336422525070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88aae8adfa944dfab0d3e98851a16638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attack: 0
+  speed: 0
+  attackInterval: 0
+  target: {fileID: 0}
+  detectionRange: 1
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  stopDistance: 1
+  maxStuckTime: 1.2
+  escapeAngle: 135
+  escapeBoost: 1.5

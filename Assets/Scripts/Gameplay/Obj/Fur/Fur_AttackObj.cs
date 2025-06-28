@@ -16,10 +16,17 @@ public class Fur_AttackObj : MonoBehaviour
         hitEnemies.Clear();
     }
 
+    public void SetAttackDamage(int damage)
+    {
+        attackDamage = damage;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("attackTri");
         if (other.CompareTag("Enemy")) // 用 Tag 判断
         {
+            Debug.Log("enemy");
             // 如果已经打中过，就不再重复攻击（可注释此段表示同一个敌人可多次被打）
             if (hitEnemies.Contains(other.gameObject)) return;
 

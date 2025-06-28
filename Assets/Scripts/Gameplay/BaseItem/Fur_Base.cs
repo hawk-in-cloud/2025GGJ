@@ -3,6 +3,7 @@ using Framework;
 using Gameplay;
 using Gameplay.BaseItem;
 using UnityEngine;
+using System.Collections;
 public class Fur_Base : MonoBehaviour
 {
     [Header("是不是激活")]
@@ -18,7 +19,13 @@ public class Fur_Base : MonoBehaviour
     //攻击力
     public int attack;
     private float _tempAttackTime;
-    
+    public bool CanAttack = true;//判断是否能攻击
+    public float AttackInterval = 0.3f;//判断是否能攻击
+    // 攻击判定子物体（带 Collider2D + AttackCollider 脚本）
+    public GameObject AttackColliderObj;
+    public Collider2D AttackCollider2D;
+
+
     Vector3 originalScale; // 原始大小
     
     // 引用组件
@@ -31,6 +38,9 @@ public class Fur_Base : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
         _col = GetComponent<Collider2D>();
+        CanAttack = true;
+        AttackColliderObj = transform.Find("AttackCollider").gameObject;
+        AttackCollider2D = AttackColliderObj.GetComponent<Collider2D>();
         originalScale = transform.localScale;
         isActive = false;
         sp.color = Color.gray;
@@ -57,15 +67,9 @@ public class Fur_Base : MonoBehaviour
 
         if (!isActive)
             return;
-        ActiveLogic();
     }
     
-    // 当物品被激活时的逻辑处理
-    public void ActiveLogic()
-    {
-        
-    }
-
+    
     Tween shakeTween;
 
     // 处理鼠标悬停时的逻辑
@@ -116,11 +120,42 @@ public class Fur_Base : MonoBehaviour
     /// <summary>
     /// 攻击函数
     /// </summary>
+
+    // 当物品被激活时的逻辑处理
     public void Attack()
     {
-       
+        if (!CanAttack)
+        {
+            return;
+        }
+            
+        StartCoroutine(DoAttack());
     }
-    
+
+    // 执行攻击的协程
+    IEnumerator DoAttack()
+    {
+        CanAttack = false;
+
+        // 激活攻击判定区域
+        AttackColliderObj.SetActive(true);
+
+        // 设置攻击力给子物体脚本
+        Fur_AttackObj attackCollider = AttackColliderObj.GetComponent<Fur_AttackObj>();
+        if (attackCollider != null)
+        {
+            attackCollider.SetAttackDamage(attack);
+        }
+
+        // 持续短时间
+        yield return new WaitForSeconds(0.2f);
+
+        AttackColliderObj.SetActive(false);
+
+        // 等待冷却
+        yield return new WaitForSeconds(AttackInterval);
+        CanAttack = true;
+    }
     /// <summary>
     /// 受伤函数
     /// </summary>
