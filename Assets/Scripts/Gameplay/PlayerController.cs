@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float shockWaveRadius_Tan;
 
     Rigidbody2D rb;
+    Animator animator;
+
     float moveX => Input.GetAxisRaw("Horizontal");
     float moveY => Input.GetAxisRaw("Vertical");
 
@@ -29,6 +31,8 @@ public class PlayerController : MonoBehaviour
         {
             // 相机震动
             Camera.main.DOShakePosition(0.1f, 0.2f, 10, 90, true);
+
+            animator.Play("Attack");
             // 攻击逻辑
             switch (type)
             {
@@ -130,6 +134,15 @@ public class PlayerController : MonoBehaviour
 
         // 计算目标速度
         Vector2 targetVelocity = inputDirection * maxSpeed;
+
+        if (targetVelocity != Vector2.zero)
+        {
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+        }
 
         // 平滑加速/减速
         if (inputDirection != Vector2.zero)
