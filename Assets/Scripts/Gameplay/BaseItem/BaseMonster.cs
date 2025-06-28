@@ -1,5 +1,6 @@
 ﻿using System;
 using Framework;
+using Gameplay.Obj;
 //using Gameplay.Obj.Fur;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -201,7 +202,13 @@ namespace Gameplay.BaseItem
                 _canAttack = false;
                 _attackTempTime = 0;
                 //小女孩本质也是fur，和fur逻辑处理一致
-                other.gameObject.GetComponent<Fur_Base>().Injured(this,attack);
+                if (other.gameObject.GetComponent<Fur_Base>() != null &&
+                    other.gameObject.GetComponent<Fur_Base>().isActive)
+                    other.gameObject.GetComponent<Fur_Base>().Injured(this, attack);
+                if (other.gameObject.GetComponent<Girl>()!= null)
+                {
+                    other.gameObject.GetComponent<Girl>().Injured(this);
+                }
             }
         }
     }

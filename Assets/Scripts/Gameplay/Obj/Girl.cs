@@ -6,9 +6,10 @@ namespace Gameplay.Obj
     public class Girl : MonoBehaviour
     {
         public int health = 4;
-        void Injure(BaseMonster monster)
+        public void Injured(BaseMonster monster)
         {
             health--;
+            
             if (health <= 0)
             {
                 Destroy(gameObject);
