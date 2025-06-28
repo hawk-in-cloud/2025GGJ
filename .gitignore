@@ -1,10 +1,50 @@
-# Unity 不应加入版本控制的文件夹
-Library/
-Logs/
-Temp/
-Obj/
+# ============ Unity 特有忽略文件 ============
+
+# 编译缓存文件夹
+/[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/              # 改为只忽略根目录 Obj，避免 Assets/.../Obj 被误判
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# 用户设置（个人 IDE 配置）
 UserSettings/
 .vs/
+*.user
+*.suo
+
+# IDE 和工程生成文件（可再生）
 *.csproj
 *.sln
-*.user
+*.pidb
+*.booproj
+*.svd
+*.tmp
+
+# Unity 默认生成的系统文件
+*.unityproj
+*.DS_Store
+*.apk
+*.aab
+*.log
+
+# Rider、VSCode 配置
+.idea/
+.vscode/
+
+# macOS 和 Windows 临时文件
+*.swp
+*.bak
+*.orig
+Thumbs.db
+.DS_Store
+
+# 打包输出（如果打包放在工程中）
+Build/
+Builds/
+ExportedObj/
+
+# Unity 其他配置项（可按需添加）
+MemoryCaptures/
+CrashReports/
