@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float shockWaveRadius_Tan;
 
     Rigidbody2D rb;
+    Animator animator;
+
     float moveX => Input.GetAxisRaw("Horizontal");
     float moveY => Input.GetAxisRaw("Vertical");
 
@@ -24,22 +26,24 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
+        animator = GetComponent<Animator>();
 
         EventManager.Instance.AddEventListener<E_RatatanType>(E_EventType.E_Beat_Success, (type) =>
         {
             // 相机震动
             Camera.main.DOShakePosition(0.1f, 0.2f, 10, 90, true);
+            animator.Play("Attack", 0, 0f);
+            CircleShockTrigger.Instance.TriggerCircleShock(transform);
+            GameObject obj = PoolManager.Instance.GetObj("VFX", "dirt");
+            obj.transform.position = new Vector2(transform.position.x - 0.3f, transform.position.y - 1.5f);
             // 攻击逻辑
             switch (type)
             {
                 case E_RatatanType.Ra:
-
                     break;
                 case E_RatatanType.Ta:
-
                     break;
                 case E_RatatanType.Tan:
-
                     break;
             }
         });
@@ -130,6 +134,15 @@ public class PlayerController : MonoBehaviour
 
         // 计算目标速度
         Vector2 targetVelocity = inputDirection * maxSpeed;
+
+        if (targetVelocity != Vector2.zero)
+        {
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+        }
 
         // 平滑加速/减速
         if (inputDirection != Vector2.zero)

@@ -1,4 +1,4 @@
-﻿Shader "AllIn1SpriteShader/AllIn1SpriteShader"
+﻿Shader "HawksShader/AllIn1SpriteShader"
 {
     Properties
     {
