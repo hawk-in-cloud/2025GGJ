@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
             Camera.main.DOShakePosition(0.1f, 0.2f, 10, 90, true);
             animator.Play("Attack", 0, 0f);
             CircleShockTrigger.Instance.TriggerCircleShock(transform);
+            GameObject obj = PoolManager.Instance.GetObj("VFX", "dirt");
+            obj.transform.SetParent(transform, false);
             // ¹¥»÷Âß¼­
             switch (type)
             {
