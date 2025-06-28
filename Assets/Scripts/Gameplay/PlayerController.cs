@@ -1,7 +1,9 @@
 using DG.Tweening;
 using Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     [Header("移动参数")]
@@ -47,6 +49,21 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         });
+
+        EventManager.Instance.AddEventListener(E_EventType.E_StartGame, () =>
+        {
+            AudioManager.Instance.PlayBKMusic("GameMusic");
+            if (isSequenceRunning)
+            {
+                StopCoroutine(sequenceCoroutine);
+                isSequenceRunning = false;
+            }
+            else
+            {
+                sequenceCoroutine = StartCoroutine(TriggerSequence());
+                isSequenceRunning = true;
+            }
+        });
     }
 
     private Coroutine sequenceCoroutine;
@@ -74,16 +91,7 @@ public class PlayerController : MonoBehaviour
         // 增加乐谱
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            if (isSequenceRunning)
-            {
-                StopCoroutine(sequenceCoroutine);
-                isSequenceRunning = false;
-            }
-            else
-            {
-                sequenceCoroutine = StartCoroutine(TriggerSequence());
-                isSequenceRunning = true;
-            }
+            EventManager.Instance.EventTrigger(E_EventType.E_StartGame);
         }
 
 
@@ -111,19 +119,39 @@ public class PlayerController : MonoBehaviour
         E_RatatanType.Ta,
         E_RatatanType.Tan
         };
+        List<float> times = new List<float>
+        {
+            5.95f,  6.50f,  7.43f,  8.91f,  9.47f, 10.39f, 11.87f, 12.43f, 13.36f, 14.84f,
+            15.39f, 16.32f, 20.21f, 20.76f, 22.25f, 22.80f, 23.73f, 26.13f, 26.69f, 28.17f,
+            28.73f, 34.10f, 34.66f, 35.58f, 36.50f, 37.06f, 38.54f, 39.10f, 40.02f, 40.58f,
+            41.50f, 42.43f, 42.99f, 44.47f, 45.02f, 45.95f, 46.51f, 47.43f, 48.36f, 48.91f,
+            50.39f, 50.95f, 51.87f, 52.43f, 53.36f, 54.28f, 54.84f, 56.32f, 56.87f
+        };
+
+        float currentTime = 0f;
+        int beatIndex = 0;
+        int index = 0;
 
         while (true)
         {
-            for (int i = 0; i < sequence.Length; i++)
+            Debug.Log($"当前时间{currentTime}");
+            if (currentTime >= times[index] - 2.75f)
             {
-                EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[i]);
-                float random = Random.Range(0.4f, 0.6f);
-                yield return new WaitForSeconds(random);
+                EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[beatIndex]);
+                index++;
+                beatIndex++;
+                if (beatIndex >= 3)
+                    beatIndex = 0;
             }
 
-            float rest = Random.Range(1.5f, 2.0f);
-            Debug.Log($"进行{rest}s休息...");
-            yield return new WaitForSeconds(2f);
+            currentTime += 0.01f;
+
+            if(currentTime >= times[times.Count - 1])
+            {
+                currentTime = 0f;
+            }
+
+            yield return new WaitForSeconds(0.01f);
         }
     }
 

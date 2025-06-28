@@ -10,6 +10,7 @@ public enum E_EventType
     E_GameItem_Generate,
     E_Player_GetRewa,
     E_Test,
+    E_StartGame,
 
     // Input
     E_Input_J,

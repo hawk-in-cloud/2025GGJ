@@ -30,12 +30,15 @@ public class Fur_Base : MonoBehaviour
     
     // 引用组件
     protected Animator _anim;
-    private SpriteRenderer sp;
     private Collider2D _col;
+    Material _mat;
 
     private void Awake()
     {
-        sp = GetComponent<SpriteRenderer>();
+        _mat = GetComponent<SpriteRenderer>().material;
+        if(_mat != null)
+            Debug.Log(_mat.name.ToString());
+
         _anim = GetComponent<Animator>();
         _col = GetComponent<Collider2D>();
         CanAttack = true;
@@ -43,8 +46,9 @@ public class Fur_Base : MonoBehaviour
         AttackCollider2D = AttackColliderObj.GetComponent<Collider2D>();
         originalScale = transform.localScale;
         isActive = false;
-        sp.color = Color.gray;
-        
+
+        _mat.SetColor("_Color", Color.gray);
+
         EventManager.Instance.EventTrigger(E_EventType.E_GameItem_Generate);
     }
 
@@ -96,8 +100,7 @@ public class Fur_Base : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 this.isActive = true;
-
-                sp.color = Color.white;
+                _mat.SetColor("_Color", Color.white);
                 LevelManager.Instance.ExitLevelUpMode();
                 _anim.Play("Idle");
             }
