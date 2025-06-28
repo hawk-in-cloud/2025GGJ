@@ -20645,6 +20645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249645302}
   - component: {fileID: 249645300}
+  - component: {fileID: 249645303}
   m_Layer: 0
   m_Name: "\u5C04\u7EBF\u5149\u6CE2"
   m_TagString: Untagged
@@ -20772,6 +20773,23 @@ Transform:
   - {fileID: 2043472324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249645303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249645299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30c1412100f74d4b9fff50a1c5762ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 249645302}
+  lineRenderer: {fileID: 249645300}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &249763077
 GameObject:
   m_ObjectHideFlags: 0
