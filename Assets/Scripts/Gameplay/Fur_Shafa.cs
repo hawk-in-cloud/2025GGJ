@@ -14,6 +14,6 @@ public class Fur_Shafa : Fur_Base
     {
         if (!isActive || type != E_RatatanType.Tan)
             return;
-        animator.Play("Attack", 0, 0.0f);
+        _anim.Play("Attack", 0, 0.0f);
     }
 }
