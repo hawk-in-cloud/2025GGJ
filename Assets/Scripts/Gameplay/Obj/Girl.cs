@@ -8,12 +8,13 @@ namespace Gameplay.Obj
         public int health = 4;
         public void Injured(BaseMonster monster)
         {
+            Debug.Log($"INJ{health}");
             health--;
+            MonsterMgr.Instance.DestroyAllMonsters();
             
             if (health <= 0)
             {
                 Destroy(gameObject);
-                
                 // TODO: Add game over
             }
         }

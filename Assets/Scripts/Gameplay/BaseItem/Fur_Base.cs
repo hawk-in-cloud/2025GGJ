@@ -30,7 +30,6 @@ public class Fur_Base : MonoBehaviour
     
     // 引用组件
     protected Animator _anim;
-    private Collider2D _col;
     Material _mat;
 
     private void Awake()
@@ -40,7 +39,6 @@ public class Fur_Base : MonoBehaviour
             Debug.Log(_mat.name.ToString());
 
         _anim = GetComponent<Animator>();
-        _col = GetComponent<Collider2D>();
         CanAttack = true;
         AttackColliderObj = transform.Find("AttackCollider").gameObject;
         AttackCollider2D = AttackColliderObj.GetComponent<Collider2D>();
@@ -48,8 +46,6 @@ public class Fur_Base : MonoBehaviour
         isActive = false;
 
         _mat.SetColor("_Color", Color.gray);
-        
-        _col.enabled = false;
 
         EventManager.Instance.EventTrigger(E_EventType.E_GameItem_Generate);
     }
@@ -97,7 +93,6 @@ public class Fur_Base : MonoBehaviour
                 _mat.SetColor("_Color", Color.white);
                 LevelManager.Instance.ExitLevelUpMode();
                 _anim.Play("Idle");
-                _col.enabled = true;
             }
         }
         else
@@ -166,7 +161,6 @@ public class Fur_Base : MonoBehaviour
             _anim.Play("Injured",0,0);
             
             //失活碰撞体
-            _col.enabled = false;
             monster.target = MonsterMgr.Instance.ReturnNearestProps(monster);
             Die();
         }

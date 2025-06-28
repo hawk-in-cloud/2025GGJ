@@ -180,6 +180,18 @@ namespace Gameplay
 
             return nearest;
         }
+        
+        /// <summary>
+        /// 销毁所有怪物
+        /// </summary>
+        public void DestroyAllMonsters()
+        {
+            foreach (var monster in  allMonsters)
+            {
+                monster.Injured(999);
+            }
+        }
+
 
         /// <summary>
         /// 击退力的大小

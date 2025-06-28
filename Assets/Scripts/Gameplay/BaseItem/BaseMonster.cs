@@ -101,6 +101,7 @@ namespace Gameplay.BaseItem
                 var deadTime = MonsterMgr.Instance.GetAnimLength(_anim,"Dead");
                 //延迟执行死亡函数
                 Invoke("Die", deadTime);
+                GetComponent<Collider2D>().enabled = false;
                 return;
             }
             //播放受伤动画
@@ -111,7 +112,7 @@ namespace Gameplay.BaseItem
         public void Die()
         {
             //触发死亡事件
-            EventManager.Instance.EventTrigger(E_EventType.E_Monster_Dead);
+            EventManager.Instance.EventTrigger<BaseMonster>(E_EventType.E_Monster_Dead, this);
             //进入对象池
             PoolManager.Instance.PushObj(gameObject);
         }
@@ -182,6 +183,7 @@ namespace Gameplay.BaseItem
             }
         }
 
+
         void OnDrawGizmosSelected()
         {
             if (target == null) return;
@@ -193,9 +195,9 @@ namespace Gameplay.BaseItem
                 Gizmos.DrawLine(transform.position, transform.position + (Vector3)(testDir * detectionRange));
             }
         }
-        private void OnCollisionStay2D(Collision2D other)
+
+        private void OnTriggerStay2D(Collider2D other)
         {
-            
             if (other.gameObject.CompareTag("Player"))
             {
                 if (!_canAttack) return;
@@ -211,5 +213,24 @@ namespace Gameplay.BaseItem
                 }
             }
         }
+
+        // private void OnCollisionStay2D(Collision2D other)
+        // {
+        //     
+        //     if (other.gameObject.CompareTag("Player"))
+        //     {
+        //         if (!_canAttack) return;
+        //         _canAttack = false;
+        //         _attackTempTime = 0;
+        //         //小女孩本质也是fur，和fur逻辑处理一致
+        //         if (other.gameObject.GetComponent<Fur_Base>() != null &&
+        //             other.gameObject.GetComponent<Fur_Base>().isActive)
+        //             other.gameObject.GetComponent<Fur_Base>().Injured(this, attack);
+        //         if (other.gameObject.GetComponent<Girl>()!= null)
+        //         {
+        //             other.gameObject.GetComponent<Girl>().Injured(this);
+        //         }
+        //     }
+        // }
     }
 }
