@@ -2,7 +2,7 @@
  using System.Linq;
 using Framework;
 using Gameplay.BaseItem;
-using Gameplay.Obj.Fur;
+//using Gameplay.Obj.Fur;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -180,10 +180,10 @@ namespace Gameplay
             {
                 force = 2f;
             }
-            else if (fur is Fur_Cabinet)
-            {
-                force = 3f;
-            }
+            //else if (fur is Fur_Cabinet)
+            //{
+            //    force = 3f;
+            //}
             else if (fur is Fur_Shafa)
             {
                 force = 5f;

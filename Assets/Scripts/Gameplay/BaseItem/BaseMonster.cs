@@ -1,6 +1,6 @@
 ﻿using System;
 using Framework;
-using Gameplay.Obj.Fur;
+//using Gameplay.Obj.Fur;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
