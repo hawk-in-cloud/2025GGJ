@@ -5,6 +5,7 @@ using Gameplay.BaseItem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 public class Fur_Base : MonoBehaviour
@@ -32,6 +33,7 @@ public class Fur_Base : MonoBehaviour
     protected Animator _anim;
     private SpriteRenderer sp;
     private BoxCollider2D _col;
+
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
@@ -99,6 +101,7 @@ public class Fur_Base : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 this.isActive = true;
+
                 sp.color = Color.white;
                 LevelManager.Instance.ExitLevelUpMode();
                 _anim.Play("Idle");

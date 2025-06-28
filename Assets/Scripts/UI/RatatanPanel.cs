@@ -14,6 +14,7 @@ public class RatatanPanel : BasePanel
     // 维护所有活跃的beat对象 -> 模拟队列
     public List<GameObject> ActiveBeatItems = new List<GameObject>();
 
+    public RectTransform spawnFontTrans;
     RectTransform spawnRect;
     RatatanPanel_Trigger trigger;
     public override void ShowPanel()
@@ -40,6 +41,20 @@ public class RatatanPanel : BasePanel
             {
                 ActiveBeatItems.RemoveAt(0);
             }
+        });
+
+        EventManager.Instance.AddEventListener<E_RatatanType>(E_EventType.E_Beat_Success, (type) =>
+        {
+            GameObject obj = PoolManager.Instance.GetObj("Beat", "Perfect");
+            obj.transform.SetParent(transform.parent);
+            obj.GetComponent<RectTransform>().localPosition = spawnFontTrans.localPosition;
+        });
+
+        EventManager.Instance.AddEventListener(E_EventType.E_Beat_Failure, () =>
+        {
+            GameObject obj = PoolManager.Instance.GetObj("Beat", "Miss");
+            obj.transform.SetParent(transform.parent);
+            obj.GetComponent<RectTransform>().localPosition = spawnFontTrans.localPosition;
         });
     }
 

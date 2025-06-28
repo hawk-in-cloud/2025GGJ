@@ -207,6 +207,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253706151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253706152}
+  m_Layer: 5
+  m_Name: SpawnFontPoint
+  m_TagString: SpawnFont
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &253706152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253706151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750503741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -665, y: 308}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &482920928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -574,10 +609,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3212244890996952118, guid: a36d15b1f654069489fbad50903bb9fd, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e1da771c4573d844fb9c134a9909a4ec, type: 2}
     - target: {fileID: 5457643292157371747, guid: a36d15b1f654069489fbad50903bb9fd, type: 3}
       propertyPath: m_Name
       value: Clock (1)
@@ -949,6 +980,7 @@ RectTransform:
   m_Children:
   - {fileID: 1929245855}
   - {fileID: 1792748552}
+  - {fileID: 253706152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1234,6 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelName: 
   ActiveBeatItems: []
+  spawnFontTrans: {fileID: 253706152}
 --- !u!1 &1957370224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1307,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 08edae20071e5b340aa7545bfeb464e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1511,10 +1544,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3212244890996952118, guid: a36d15b1f654069489fbad50903bb9fd, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e1da771c4573d844fb9c134a9909a4ec, type: 2}
     - target: {fileID: 5457643292157371747, guid: a36d15b1f654069489fbad50903bb9fd, type: 3}
       propertyPath: m_Name
       value: Clock
