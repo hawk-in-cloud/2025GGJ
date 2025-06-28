@@ -48,21 +48,15 @@ public class Fur_Base : MonoBehaviour
         isActive = false;
 
         _mat.SetColor("_Color", Color.gray);
+        
+        _col.enabled = false;
 
         EventManager.Instance.EventTrigger(E_EventType.E_GameItem_Generate);
     }
 
     protected virtual void Start()
     {
-        if (isActive)
-        {
-            //启用碰撞体
-            _col.enabled = true;
-        }
-        else
-        {
-            _col.enabled = false;
-        }
+        
     }
 
     private void Update()
@@ -103,6 +97,7 @@ public class Fur_Base : MonoBehaviour
                 _mat.SetColor("_Color", Color.white);
                 LevelManager.Instance.ExitLevelUpMode();
                 _anim.Play("Idle");
+                _col.enabled = true;
             }
         }
         else

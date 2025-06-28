@@ -139,6 +139,7 @@ namespace Gameplay
                     continue;
                 }
             }
+            propsList = findList.ToArray();
             
             //查找活跃的
             // propsList = propsList.Where(obj =>

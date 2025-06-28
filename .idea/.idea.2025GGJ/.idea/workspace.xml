@@ -4,70 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b84eb1d-524b-4c60-b56e-c0d3e1c12889" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2025GGJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Injured.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Injured.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster1/Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Injured.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Injured.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster2/Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Animation/Monsters/Monster3/Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Dead.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Dead.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Idel.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Idel.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Injured.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop1/Injured.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Dead.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Dead.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Idel.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Idel.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Injured.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop2/Injured.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Dead.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Dead.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Idel.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Idel.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Injured.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Props/Prop3/Injured.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Dead.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Dead.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Idel.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Idel.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Injured.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animation/Template/Prop/Injured.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animator/BaseProp.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Animator/BaseProp.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Cabinet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Cabinet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Clock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Clock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Mirror.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Mirror.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Fur/Shafa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Fur/Shafa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GameObject/Monster/monster3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RemoveAfterAnim.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RemoveAfterAnim.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tests/Racio_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tests/Racio_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/BaseMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/BaseItem/Fur_Base.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Clock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Clock.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Mirror.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Mirror.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Shafa.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Fur_Shafa.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MonsterMgr.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="5b84eb1d-524b-4c60-b56e-c0d3e1c12889" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
