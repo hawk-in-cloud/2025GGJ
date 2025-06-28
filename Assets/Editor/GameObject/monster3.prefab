@@ -34,7 +34,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8795436724926536140}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3261866155013691609
@@ -209,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff07c8c94894144ad58b4090900c69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Editor/GameObject/monster3.prefab
   target: {fileID: 0}
   moveSpeed: 2
   detectionRange: 1
@@ -218,3 +220,75 @@ MonoBehaviour:
   maxStuckTime: 1.2
   escapeAngle: 135
   escapeBoost: 1.5
+=======
+  isActive: 0
+  scaleFactor: 1.2
+  scaleSpeed: 5
+  health: 0
+  attack: 0
+  attackInterval: 1
+  canAttack: 1
+  attackColliderObj: {fileID: 0}
+--- !u!1001 &4592593529187729093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3635716417092322249}
+    m_Modifications:
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215969567617752054, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+      propertyPath: m_Name
+      value: AttackCollider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+--- !u!4 &8795436724926536140 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5022499170281727753, guid: 5692d36516180d54cb402ef99a4ddd6e, type: 3}
+  m_PrefabInstance: {fileID: 4592593529187729093}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Editor/Fur/Mirror.prefab
