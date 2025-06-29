@@ -115,6 +115,8 @@ public class PlayerController : MonoBehaviour
         {
             3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
         };
+        float SpiderWeb = 2.0f;
+        bool hasSpider = false;
 
         float currentTime = 0f;
         int beatIndex = 0;
@@ -138,6 +140,12 @@ public class PlayerController : MonoBehaviour
                 Debug.Log($"Éú³É¹ÖÎï{monsWave}");
                 MonsterMgr.Instance.GenerateMonster(5);
                 monsWave++;
+            }
+
+            if (currentTime >= SpiderWeb && !hasSpider)
+            {
+                GameObject.Find("SpiderWeb").GetComponent<Animator>().Play("Active");
+                hasSpider = true;
             }
 
             currentTime += 0.01f;
