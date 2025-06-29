@@ -14,6 +14,8 @@ namespace Gameplay.Obj
             MonsterMgr.Instance.DestroyAllMonsters();
             CircleShockTrigger.Instance.TriggerCircleShock(transform);
             MonsterMgr.Instance.StopAllMonsters();
+            EventManager.Instance.EventTrigger(E_EventType.E_GirlInjured);
+
             if (health <= 0)
             {
                 Destroy(gameObject);
