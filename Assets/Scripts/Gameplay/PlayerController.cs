@@ -121,6 +121,11 @@ public class PlayerController : MonoBehaviour
         {
             3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
         };
+        List<float> beatWhite = new List<float>
+        {
+            17.0f,18.0f,19.0f,21.0f,24.0f,25.0f,27.0f,29.0f,30.0f,31.0f,32f,33f,43f,49f,55f
+        };
+
         float SpiderWeb = 2.0f;
         bool hasSpider = false;
 
@@ -129,9 +134,11 @@ public class PlayerController : MonoBehaviour
         int index = 0;
         int monsWave = 0;
 
+        int whiteindex = 0;
+
         while (true)
         {
-            if (currentTime >= times[index] - 3.0f)
+            if (currentTime >= times[index] - 2.8f)
             {
                 Debug.Log($"Éú³ÉÒô·û{index}");
                 EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[beatIndex]);
@@ -154,6 +161,14 @@ public class PlayerController : MonoBehaviour
                 hasSpider = true;
             }
 
+            if (currentTime >= beatWhite[whiteindex] - 2.8f)
+            {
+                GameObject obj = PoolManager.Instance.GetObj("Beat", "white");
+                obj.transform.SetParent(GameObject.Find("Canvas").transform);
+                obj.transform.position = GameObject.Find("SpawnPoint").transform.position;
+                whiteindex++;
+            }
+
             currentTime += 0.01f;
 
             if(currentTime >= times[times.Count - 1])
@@ -161,6 +176,7 @@ public class PlayerController : MonoBehaviour
                 currentTime = 0f;
                 monsWave = 0;
                 index = 0;
+                whiteindex = 0;
             }
 
             yield return new WaitForSeconds(0.01f);
