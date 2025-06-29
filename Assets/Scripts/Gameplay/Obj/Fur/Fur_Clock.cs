@@ -6,9 +6,11 @@ using UnityEngine;
 
 public class Fur_Clock : Fur_Base
 {
+    public BulletEmitter bulletEmitter;
     private void Start()
     {
         EventManager.Instance.AddEventListener<E_RatatanType>(E_EventType.E_Beat_Success, Beat_Ra);
+        bulletEmitter = transform.Find("BulletEmitter").GetComponent<BulletEmitter>();
     }
 
     public void Beat_Ra(E_RatatanType type)
@@ -39,6 +41,7 @@ public class Fur_Clock : Fur_Base
         // 3. 跳跃并放大结束后，恢复原始位置和大小
         yield return new WaitForSeconds(0.3f);  // 等待跳跃和放大完成
         Attack();  // 执行攻击逻辑
+        bulletEmitter.FireBulletWave();  // 发射一波子弹
         transform.DOLocalMoveY(originalPos.y, 0.2f).SetEase(Ease.InQuad);  // 回到原位置
         transform.DOScale(originalScale, 0.2f).SetEase(Ease.InOutElastic);  // 恢复原大小
     }
