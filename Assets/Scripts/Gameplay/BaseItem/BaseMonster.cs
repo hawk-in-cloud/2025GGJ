@@ -77,6 +77,7 @@ namespace Gameplay.BaseItem
                 //随机寻路目标
                 target = MonsterMgr.Instance.ReturnNearestProps(this);
             }
+            health = 200;
             //设置速度
             moveSpeed = speed;
             lastPosition = rb.position;
