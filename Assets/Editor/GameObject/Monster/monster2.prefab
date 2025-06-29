@@ -193,10 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340294e4e4734e259e13e9a59a62c18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 300
   attack: 0
   speed: 0.5
-  attackInterval: 0
+  attackInterval: 10
   target: {fileID: 0}
   detectionRange: 1
   obstacleMask:
