@@ -9,12 +9,14 @@ public class LevelManager : Singleton<LevelManager>
     {
         isLevelUp = true;
         UIManager.Instance.ShowPanel("LevelUpPanel");
+        AudioManager.Instance.PauseBKMusic();
         Time.timeScale = 0;
     }
     public void ExitLevelUpMode()
     {
         isLevelUp = false;
         UIManager.Instance.HidePanel("LevelUpPanel");
+        AudioManager.Instance.ResumeBKMusic();
         Time.timeScale = 1;
     }
 }

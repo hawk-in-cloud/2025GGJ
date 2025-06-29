@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   attack: 2
-  speed: 2
+  speed: 0.3
   attackInterval: 10
   target: {fileID: 0}
   detectionRange: 1

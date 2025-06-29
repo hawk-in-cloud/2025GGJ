@@ -106,6 +106,13 @@ namespace Framework
             bkMusic.Pause();
         }
 
+        public void ResumeBKMusic()
+        {
+            if (bkMusic == null)
+                return;
+            bkMusic.UnPause(); // ¼ÌÐø²¥·ÅÔÝÍ£µÄÒôÆµ
+        }
+
         // Set background music volume
         public void ChangeBKMusicValue(float v)
         {

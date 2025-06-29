@@ -6,7 +6,7 @@ namespace Gameplay
     {
         public void Start()
         {
-            MonsterMgr.Instance.GenerateMonster(10);
+            //MonsterMgr.Instance.GenerateMonster(10);
         }
     }
 }

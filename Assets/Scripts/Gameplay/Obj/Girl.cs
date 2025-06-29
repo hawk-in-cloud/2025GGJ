@@ -11,6 +11,7 @@ namespace Gameplay.Obj
             Debug.Log($"INJ{health}");
             health--;
             MonsterMgr.Instance.DestroyAllMonsters();
+            CircleShockTrigger.Instance.TriggerCircleShock(transform);
             
             if (health <= 0)
             {

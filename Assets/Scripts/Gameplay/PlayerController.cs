@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Framework;
+using Gameplay;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,23 +72,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, E_RatatanType.Ra);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, E_RatatanType.Ta);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, E_RatatanType.Tan);
-        }
-        // 获得经验
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            EventManager.Instance.EventTrigger<float>(E_EventType.E_Exp_GetExp, 35f);
-        }
         // 增加乐谱
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
@@ -127,21 +111,33 @@ public class PlayerController : MonoBehaviour
             41.50f, 42.43f, 42.99f, 44.47f, 45.02f, 45.95f, 46.51f, 47.43f, 48.36f, 48.91f,
             50.39f, 50.95f, 51.87f, 52.43f, 53.36f, 54.28f, 54.84f, 56.32f, 56.87f
         };
+        List<float> monsTimes = new List<float>
+        {
+            3.0f,80.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
+        };
 
         float currentTime = 0f;
         int beatIndex = 0;
         int index = 0;
+        int monsWave = 0;
 
         while (true)
         {
-            Debug.Log($"当前时间{currentTime}");
-            if (currentTime >= times[index] - 2.75f)
+            if (currentTime >= times[index] - 3.0f)
             {
+                Debug.Log($"生成音符{index}");
                 EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[beatIndex]);
                 index++;
                 beatIndex++;
                 if (beatIndex >= 3)
                     beatIndex = 0;
+            }
+
+            if (currentTime >= monsTimes[monsWave])
+            {
+                Debug.Log($"生成怪物{monsWave}");
+                MonsterMgr.Instance.GenerateMonster(5);
+                monsWave++;
             }
 
             currentTime += 0.01f;
