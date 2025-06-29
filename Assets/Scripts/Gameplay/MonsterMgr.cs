@@ -54,6 +54,7 @@ namespace Gameplay
                 var monster = PoolManager.Instance.GetObj("GameObject/Monster", RandomGetMonster());
                 monster.transform.position = GetRandomSpawnPosition();
                 monster.transform.parent = _monsterParent;
+                monster.GetComponent<BaseMonster>().Init();
             }
         }
         /// <summary>
@@ -189,6 +190,24 @@ namespace Gameplay
             foreach (var monster in  allMonsters)
             {
                 monster.Injured(999);
+            }
+        }
+        
+        //让所有的怪物都停下
+        public void StopAllMonsters()
+        {
+            foreach (var monster in allMonsters)
+            {
+                monster.StopMove();
+            }
+        }
+        
+        //让所有的怪物都走
+        public void MoveAllMonsters()
+        {
+            foreach (var monster in allMonsters)
+            {
+                monster.ResumeMove();
             }
         }
 

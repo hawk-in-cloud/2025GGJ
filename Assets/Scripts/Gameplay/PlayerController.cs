@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         };
         List<float> monsTimes = new List<float>
         {
-            3.0f,80.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
+            3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
         };
 
         float currentTime = 0f;

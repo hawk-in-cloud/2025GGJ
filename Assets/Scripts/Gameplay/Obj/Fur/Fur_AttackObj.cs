@@ -42,12 +42,12 @@ public class Fur_AttackObj : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Enemy")) // 用 Tag 判断
         {
             // 如果已经打中过，就不再重复攻击（可注释此段表示同一个敌人可多次被打）
-            if (hitEnemies.Contains(other.gameObject)) return;
+            //if (hitEnemies.Contains(other.gameObject)) return;
 
             hitEnemies.Add(other.gameObject);
 
