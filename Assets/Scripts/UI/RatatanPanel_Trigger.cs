@@ -24,12 +24,6 @@ public class RatatanPanel_Trigger : MonoBehaviour
         Init();
     }
 
-    private void OnValidate()
-    {
-        RectTransform rect = GetComponent<RectTransform>();
-        rect.sizeDelta = new Vector2(detectionRadius, rect.sizeDelta.y);
-    }
-
     /// <summary>
     /// ≥ı ºªØ
     /// </summary>
