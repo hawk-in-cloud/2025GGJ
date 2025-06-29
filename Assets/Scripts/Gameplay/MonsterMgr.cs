@@ -47,7 +47,7 @@ namespace Gameplay
         /// 生成怪物
         /// </summary>
         /// <param name="count"></param>
-        public void GenerateMonster(int count)
+        public void GenerateMonster(int count, int cnt)
         {
             for (int i = 0; i < count; i++)
             {
@@ -55,6 +55,7 @@ namespace Gameplay
                 monster.transform.position = GetRandomSpawnPosition();
                 monster.transform.parent = _monsterParent;
                 monster.GetComponent<BaseMonster>().Init();
+                monster.GetComponent<BaseMonster>().health += cnt;
             }
         }
         /// <summary>
