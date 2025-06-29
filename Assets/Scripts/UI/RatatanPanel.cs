@@ -1,6 +1,8 @@
 using Framework;
 using System.Collections.Generic;
+using Gameplay.BaseItem;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public enum E_RatatanType
@@ -13,7 +15,14 @@ public class RatatanPanel : BasePanel
 {
     // 维护所有活跃的beat对象 -> 模拟队列
     public List<GameObject> ActiveBeatItems = new List<GameObject>();
+<<<<<<< Updated upstream
 
+=======
+    public RectTransform spawnFontTrans;
+
+    //菜单按钮
+    public Button reTurnBtn;
+>>>>>>> Stashed changes
     RectTransform spawnRect;
     RatatanPanel_Trigger trigger;
     public override void ShowPanel()

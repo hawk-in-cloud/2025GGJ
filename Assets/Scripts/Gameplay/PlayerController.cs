@@ -117,9 +117,29 @@ public class PlayerController : MonoBehaviour
                 yield return new WaitForSeconds(random);
             }
 
+<<<<<<< Updated upstream
             float rest = Random.Range(1.5f, 2.0f);
             Debug.Log($"进行{rest}s休息...");
             yield return new WaitForSeconds(2f);
+=======
+            if (currentTime >= monsTimes[monsWave])
+            {
+                Debug.Log($"生成怪物{monsWave}");
+                MonsterMgr.Instance.GenerateMonster(5);
+                monsWave++;
+                if (monsWave >= monsTimes.Count)
+                    monsWave = 0;
+            }
+
+            currentTime += 0.01f;
+
+            if(currentTime >= times[times.Count - 1])
+            {
+                currentTime = 0f;
+            }
+
+            yield return new WaitForSeconds(0.01f);
+>>>>>>> Stashed changes
         }
     }
 

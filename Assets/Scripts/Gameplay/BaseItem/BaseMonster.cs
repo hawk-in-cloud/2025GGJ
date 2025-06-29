@@ -90,7 +90,11 @@ namespace Gameplay.BaseItem
                 //播放死亡动画
                 _anim.SetBool("Dead", true);
                 //计算动画播放时间
-                var deadTime = MonsterMgr.Instance.GetAnimLength(_anim,"Dead");
+                var deadTime = MonsterMgr.Instance.GetAnimLength(_anim,"Dead") - 0.25f;
+                if (deadTime <= 0)
+                {
+                    deadTime = 0.25f;
+                }
                 //延迟执行死亡函数
                 Invoke("Die", deadTime);
                 return;

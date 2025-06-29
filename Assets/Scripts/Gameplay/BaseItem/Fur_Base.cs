@@ -17,7 +17,7 @@ public class Fur_Base : MonoBehaviour
     
     [Header("物体属性")]
     //生命值
-    public int health;
+    public int health = 100;
     //攻击力
     public int attack;
     //攻击间隔
