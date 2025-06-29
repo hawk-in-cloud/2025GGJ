@@ -29,6 +29,8 @@ public class LineShoot : MonoBehaviour
             if (_timer <= 2f)
             {
                 LineMaterial.SetFloat("_FadeAmount", _timer * (-0.25f) + 0.4f);
+                Debug.Log("功能关闭");
+                BlueFlash.SetActive(false);
             }
             if (_timer <= 0f)
             {
@@ -65,19 +67,21 @@ public class LineShoot : MonoBehaviour
 
         if (hit.collider != null)
         {
+            Debug.Log("已命中");
             // 命中敌人：设置LineRenderer终点为 hit.point
             lineRenderer.SetPosition(0, origin);
             lineRenderer.SetPosition(1, hit.point);
-            Vector3 BlueFlashPos = new Vector3(hit.point.x, hit.point.y,8.0f);
+            Vector3 BlueFlashPos = new Vector3(hit.point.x, hit.point.y, 8.0f);
             BlueFlash.transform.position = BlueFlashPos;//设置蓝色闪光特效位置
             BlueFlash.SetActive(true);//激活蓝色闪光特效
         }
         else
         {
+            Debug.Log("未命中");
             BlueFlash.SetActive(false);//关闭蓝色闪光特效
             // 未命中：延伸100个单位
             lineRenderer.SetPosition(0, origin);
-            lineRenderer.SetPosition(1, origin + direction * 100f);
+            lineRenderer.SetPosition(1, origin + direction * 8f);
         }
     }
 
