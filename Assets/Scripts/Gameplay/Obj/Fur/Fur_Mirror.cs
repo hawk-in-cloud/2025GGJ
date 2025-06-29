@@ -27,6 +27,7 @@ public class Fur_Mirror : Fur_Base
         lineShoot.StartLineShoot();
         // ²¥·Å¹¥»÷¶¯»­
         _anim.Play("Attack", 0, 0.0f);
+        AudioManager.Instance.PlaySound("sfx_laser");
     }
 
     public void Beat_Tan(E_RatatanType type)
@@ -39,5 +40,6 @@ public class Fur_Mirror : Fur_Base
         lineShoot.StartLineShoot();
         // ²¥·Å¹¥»÷¶¯»­
         _anim.Play("Attack", 0, 0.0f);
+        AudioManager.Instance.PlaySound("sfx_laser");
     }
 }

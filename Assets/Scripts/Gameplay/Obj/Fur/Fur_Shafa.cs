@@ -17,7 +17,7 @@ public class Fur_Shafa : Fur_Base
 
         // 播放攻击动画
         _anim.Play("Attack", 0, 0.0f);
-
+        AudioManager.Instance.PlaySound("sfx_couch");
         // 执行跳跃 + 橡皮管效果
         StartCoroutine(PlayJumpAndStretchEffect());
     }

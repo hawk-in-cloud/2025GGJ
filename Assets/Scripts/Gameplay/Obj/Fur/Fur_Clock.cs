@@ -20,7 +20,7 @@ public class Fur_Clock : Fur_Base
 
         // 播放攻击动画
         _anim.Play("Attack", 0, 0.0f);
-
+        AudioManager.Instance.PlaySound("sfx_alarm");
         // 执行时钟缩小、跳跃和放大的效果
         StartCoroutine(PlayShrinkJumpAndExpandEffect());
     }

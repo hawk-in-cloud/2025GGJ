@@ -45,14 +45,17 @@ public class PlayerController : MonoBehaviour
                 case E_RatatanType.Ra:
                     int ra = Random.Range(20, 30);
                     MonsterMgr.Instance.AttackAllMonsters(ra);
+                    AudioManager.Instance.PlaySound("sfx_teddy_01");
                     break;
                 case E_RatatanType.Ta:
                     int ta = Random.Range(30, 40);
                     MonsterMgr.Instance.AttackAllMonsters(ta);
+                    AudioManager.Instance.PlaySound("sfx_teddy_02");
                     break;
                 case E_RatatanType.Tan:
                     int tan = Random.Range(50, 60);
                     MonsterMgr.Instance.AttackAllMonsters(tan);
+                    AudioManager.Instance.PlaySound("sfx_teddy_03");
                     break;
             }
         });
@@ -111,19 +114,26 @@ public class PlayerController : MonoBehaviour
         };
         List<float> times = new List<float>
         {
-            5.95f,  6.50f,  7.43f,  8.91f,  9.47f, 10.39f, 11.87f, 12.43f, 13.36f, 14.84f,
-            15.39f, 16.32f, 20.21f, 20.76f, 22.25f, 22.80f, 23.73f, 26.13f, 26.69f, 28.17f,
-            28.73f, 34.10f, 34.66f, 35.58f, 36.50f, 37.06f, 38.54f, 39.10f, 40.02f, 40.58f,
-            41.50f, 42.43f, 42.99f, 44.47f, 45.02f, 45.95f, 46.51f, 47.43f, 48.36f, 48.91f,
-            50.39f, 50.95f, 51.87f, 52.43f, 53.36f, 54.28f, 54.84f, 56.32f, 56.87f,999f
+            6.1f, 6.57f, 7.3f, 7.5f, 8.4f, 8.97f, 9.53f, 10.27f, 10.43f,
+    11.0f, 11.57f, 11.93f, 12.5f, 13.23f, 13.4f, 13.97f, 14.03f, 14.9f,
+    15.47f, 16.2f, 16.4f, 17.47f, 20.27f, 20.83f, 21.4f, 21.93f, 22.3f,
+    22.87f, 23.8f, 24.03f, 24.9f, 26.2f, 27.2f, 27.03f, 27.87f, 28.23f,
+    28.8f, 34.17f, 34.43f, 34.7f, 35.27f, 35.63f, 36.0f, 36.57f, 36.73f,
+    37.13f, 37.5f, 37.07f, 38.23f, 38.6f, 38.97f, 39.17f, 39.7f, 40.1f,
+    40.4f, 40.63f, 41.2f, 41.57f, 41.93f, 42.6f, 42.07f, 43.03f, 43.4f,
+    44.13f, 44.5f, 44.9f, 45.07f, 45.63f, 46.03f, 46.37f, 46.6f, 47.1f,
+    47.47f, 47.87f, 48.4f, 48.6f, 49.0f, 49.03f, 49.53f, 50.1f, 50.47f,
+    50.8f, 51.0f, 51.57f, 51.97f, 52.27f, 52.5f, 53.03f, 5.43f, 53.8f,
+    54.37f, 54.53f, 54.9f, 55.27f, 55.47f, 56.0f, 56.37f, 56.73f, 56.93f,
+    57.47f,999f
         };
         List<float> monsTimes = new List<float>
         {
-            3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f,999f
+            3.0f,5.0f,10.0f,15.0f,20.0f,25.0f,30.0f,35.0f,40.0f,45.0f,50.0f,999f
         };
         List<float> beatWhite = new List<float>
         {
-            17.0f,18.0f,19.0f,21.0f,24.0f,25.0f,27.0f,29.0f,30.0f,31.0f,32f,33f,43f,49f,55f,999f
+            0.0f,0.185f, 0.37f, 0.556f, 0.741f, 0.926f, 1.111f, 1.296f, 1.481f, 1.667f, 1.852f, 2.037f, 2.222f, 2.407f, 2.593f, 2.778f, 2.963f, 3.148f, 3.333f, 3.519f, 3.704f, 3.889f, 4.074f, 4.259f, 4.444f, 4.63f, 4.815f, 5.0f, 5.185f, 5.556f, 5.741f, 5.926f, 6.296f, 6.667f, 6.852f, 7.037f, 7.407f, 7.778f, 7.963f, 8.148f, 8.519f, 8.704f, 9.074f, 9.259f, 9.63f, 9.815f, 10.0f, 10.556f, 10.741f, 11.111f, 11.296f, 11.667f, 12.037f, 12.222f, 12.407f, 12.778f, 12.963f, 13.519f, 13.704f, 14.259f, 14.444f, 14.63f, 15.0f, 15.185f, 15.37f, 15.741f, 15.926f, 16.296f, 16.667f, 16.852f,999f
         };
 
         float SpiderWeb = 2.0f;
@@ -149,7 +159,7 @@ public class PlayerController : MonoBehaviour
                 whiteindex = 0;
             }
             
-            if (currentTime >= times[index] - 2.8f)
+            if (currentTime >= times[index] - 2.75f)
             {
                 Debug.Log($"Éú³ÉÒô·û{index}");
                 EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[beatIndex]);
@@ -180,7 +190,7 @@ public class PlayerController : MonoBehaviour
                 hasSpider = true;
             }
 
-            if (currentTime >= beatWhite[whiteindex] - 2.8f)
+            if (currentTime >= beatWhite[whiteindex] - 2.75f)
             {
                 GameObject obj = PoolManager.Instance.GetObj("Beat", "white");
                 obj.transform.SetParent(GameObject.Find("Canvas").transform);
