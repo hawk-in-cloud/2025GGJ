@@ -51,7 +51,7 @@ namespace Gameplay
         {
             for (int i = 0; i < count; i++)
             {
-                var monster = PoolManager.Instance.GetObj("GameObject/Monster", RandomGetMonster());
+                var monster = PoolManager.Instance.GetObj("GameObject", RandomGetMonster());
                 monster.transform.position = GetRandomSpawnPosition();
                 monster.transform.parent = _monsterParent;
                 monster.GetComponent<BaseMonster>().Init();
