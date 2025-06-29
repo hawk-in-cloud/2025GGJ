@@ -169,8 +169,8 @@ MonoBehaviour:
   isActive: 0
   scaleFactor: 1.2
   scaleSpeed: 5
-  health: 0
-  attack: 0
+  health: 200
+  attack: 10
   CanAttack: 0
   AttackInterval: 0.3
   AttackColliderObj: {fileID: 0}

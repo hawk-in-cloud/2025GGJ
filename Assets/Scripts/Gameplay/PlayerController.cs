@@ -115,15 +115,15 @@ public class PlayerController : MonoBehaviour
             15.39f, 16.32f, 20.21f, 20.76f, 22.25f, 22.80f, 23.73f, 26.13f, 26.69f, 28.17f,
             28.73f, 34.10f, 34.66f, 35.58f, 36.50f, 37.06f, 38.54f, 39.10f, 40.02f, 40.58f,
             41.50f, 42.43f, 42.99f, 44.47f, 45.02f, 45.95f, 46.51f, 47.43f, 48.36f, 48.91f,
-            50.39f, 50.95f, 51.87f, 52.43f, 53.36f, 54.28f, 54.84f, 56.32f, 56.87f
+            50.39f, 50.95f, 51.87f, 52.43f, 53.36f, 54.28f, 54.84f, 56.32f, 56.87f,999f
         };
         List<float> monsTimes = new List<float>
         {
-            3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f
+            3.0f,8.0f,13.0f,18.0f,23.0f,27.0f,33.0f,38.0f,45.0f,50.0f,999f
         };
         List<float> beatWhite = new List<float>
         {
-            17.0f,18.0f,19.0f,21.0f,24.0f,25.0f,27.0f,29.0f,30.0f,31.0f,32f,33f,43f,49f,55f
+            17.0f,18.0f,19.0f,21.0f,24.0f,25.0f,27.0f,29.0f,30.0f,31.0f,32f,33f,43f,49f,55f,999f
         };
 
         float SpiderWeb = 2.0f;
@@ -138,11 +138,26 @@ public class PlayerController : MonoBehaviour
 
         while (true)
         {
+            currentTime += 0.01f;
+
+            Debug.Log(currentTime);
+            if(currentTime >= 76f)
+            {
+                currentTime = 0f;
+                monsWave = 0;
+                index = 0;
+                whiteindex = 0;
+            }
+            
             if (currentTime >= times[index] - 2.8f)
             {
                 Debug.Log($"生成音符{index}");
                 EventManager.Instance.EventTrigger<E_RatatanType>(E_EventType.E_Spawn, sequence[beatIndex]);
                 index++;
+                if (index > times.Count - 1)
+                {
+                    index--;
+                }
                 beatIndex++;
                 if (beatIndex >= 3)
                     beatIndex = 0;
@@ -153,6 +168,10 @@ public class PlayerController : MonoBehaviour
                 Debug.Log($"生成怪物{monsWave}");
                 MonsterMgr.Instance.GenerateMonster(5 + monsWave, 15 * monsWave);
                 monsWave++;
+                if (monsWave > monsTimes.Count - 1)
+                {
+                    monsWave--;
+                }
             }
 
             if (currentTime >= SpiderWeb && !hasSpider)
@@ -167,17 +186,13 @@ public class PlayerController : MonoBehaviour
                 obj.transform.SetParent(GameObject.Find("Canvas").transform);
                 obj.transform.position = GameObject.Find("SpawnPoint").transform.position;
                 whiteindex++;
+                if (whiteindex > beatWhite.Count - 1)
+                {
+                    whiteindex--;
+                }
             }
 
-            currentTime += 0.01f;
-
-            if(currentTime >= times[times.Count - 1])
-            {
-                currentTime = 0f;
-                monsWave = 0;
-                index = 0;
-                whiteindex = 0;
-            }
+            
 
             yield return new WaitForSeconds(0.01f);
         }
