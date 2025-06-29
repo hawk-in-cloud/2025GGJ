@@ -11,6 +11,7 @@ public enum E_EventType
     E_Player_GetRewa,
     E_Test,
     E_StartGame,
+    E_GirlInjured,
 
     // Input
     E_Input_J,
