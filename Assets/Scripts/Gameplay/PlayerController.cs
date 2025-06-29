@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             if (currentTime >= monsTimes[monsWave])
             {
                 Debug.Log($"Éú³É¹ÖÎï{monsWave}");
-                MonsterMgr.Instance.GenerateMonster(5);
+                MonsterMgr.Instance.GenerateMonster(5 + monsWave, 15 * monsWave);
                 monsWave++;
             }
 
@@ -159,6 +159,8 @@ public class PlayerController : MonoBehaviour
             if(currentTime >= times[times.Count - 1])
             {
                 currentTime = 0f;
+                monsWave = 0;
+                index = 0;
             }
 
             yield return new WaitForSeconds(0.01f);
