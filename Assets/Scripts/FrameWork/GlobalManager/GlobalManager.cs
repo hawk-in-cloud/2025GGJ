@@ -16,8 +16,7 @@ namespace Framework
         {
 #if UNITY_EDITOR
             GameMode = E_GameMode.DEBUG;
-#else
-            GameMode = GAMEMODE.RELEASE;
+
 #endif // UNITY_EDITOR
         }
     }
