@@ -41,6 +41,7 @@ namespace Gameplay.BaseItem
         private Rigidbody2D rb;
         private Vector2 lastPosition;
         private float stuckTimer = 0f;
+        private SpriteRenderer sp;
         
         //私有变量
         private bool _canAttack;
@@ -51,23 +52,7 @@ namespace Gameplay.BaseItem
         {
             _anim = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
-        }
-        
-        protected void Start()
-        {
-            //寻路目标初始化
-            if (target == null)
-            {
-                //随机寻路目标
-                target = MonsterMgr.Instance.ReturnNearestProps(this);
-            }
-            //设置速度
-            moveSpeed = speed;
-            lastPosition = rb.position;
-            
-            //触发事件 -- 怪物的生成注册事件
-            EventManager.Instance.EventTrigger<BaseMonster>(E_EventType.E_Monster_Generate, this);
-            Init();
+            sp = GetComponent<SpriteRenderer>();
         }
 
         protected virtual void Update()
@@ -84,7 +69,21 @@ namespace Gameplay.BaseItem
         }
 
         //初始化函数
-        protected abstract void Init();
+        public void Init()
+        {
+            //寻路目标初始化
+            if (target == null)
+            {
+                //随机寻路目标
+                target = MonsterMgr.Instance.ReturnNearestProps(this);
+            }
+            //设置速度
+            moveSpeed = speed;
+            lastPosition = rb.position;
+            GetComponent<Collider2D>().enabled = true;
+            //触发事件
+            EventManager.Instance.EventTrigger<BaseMonster>(E_EventType.E_Monster_Generate, this);
+        }
 
         /// <summary>
         /// 收到伤害函数 -- 让外部调用
@@ -111,6 +110,8 @@ namespace Gameplay.BaseItem
         //死亡函数
         public void Die()
         {
+            target = null;
+            StopMove();
             //触发死亡事件
             EventManager.Instance.EventTrigger<BaseMonster>(E_EventType.E_Monster_Dead, this);
             //进入对象池
@@ -119,6 +120,9 @@ namespace Gameplay.BaseItem
         void FixedUpdate()
         {
             if (target == null) return;
+           
+            if(moveSpeed == 0) return;
+            
             float distanceToTarget = Vector2.Distance(target.position, transform.position);
             if (distanceToTarget < stopDistance)
             {
@@ -212,6 +216,24 @@ namespace Gameplay.BaseItem
                     other.gameObject.GetComponent<Girl>().Injured(this);
                 }
             }
+        }
+
+        
+        /// <summary>
+        /// 停止移动
+        /// </summary>
+        public void StopMove()
+        {
+            moveSpeed = 0;
+            rb.velocity = Vector2.zero;
+        }
+
+        /// <summary>
+        /// 重新开始移动
+        /// </summary>
+        public void ResumeMove()
+        {
+            moveSpeed = speed;
         }
 
         // private void OnCollisionStay2D(Collision2D other)

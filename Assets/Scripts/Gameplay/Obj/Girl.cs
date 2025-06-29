@@ -12,7 +12,7 @@ namespace Gameplay.Obj
             health--;
             MonsterMgr.Instance.DestroyAllMonsters();
             CircleShockTrigger.Instance.TriggerCircleShock(transform);
-            
+            MonsterMgr.Instance.StopAllMonsters();
             if (health <= 0)
             {
                 Destroy(gameObject);

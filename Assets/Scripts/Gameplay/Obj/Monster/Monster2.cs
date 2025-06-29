@@ -4,9 +4,6 @@ namespace Gameplay.Obj.Monster
 {
     public class Monster2 : BaseMonster
     {
-        protected override void Init()
-        {
-            
-        }
+        public Monster2(){}
     }
 }
