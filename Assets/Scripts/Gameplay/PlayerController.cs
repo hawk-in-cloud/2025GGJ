@@ -43,10 +43,16 @@ public class PlayerController : MonoBehaviour
             switch (type)
             {
                 case E_RatatanType.Ra:
+                    int ra = Random.Range(20, 30);
+                    MonsterMgr.Instance.AttackAllMonsters(ra);
                     break;
                 case E_RatatanType.Ta:
+                    int ta = Random.Range(30, 40);
+                    MonsterMgr.Instance.AttackAllMonsters(ta);
                     break;
                 case E_RatatanType.Tan:
+                    int tan = Random.Range(50, 60);
+                    MonsterMgr.Instance.AttackAllMonsters(tan);
                     break;
             }
         });

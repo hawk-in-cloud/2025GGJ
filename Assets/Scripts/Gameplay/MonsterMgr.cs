@@ -192,7 +192,15 @@ namespace Gameplay
                 monster.Injured(999);
             }
         }
-        
+
+        public void AttackAllMonsters(int damage)
+        {
+            foreach (var monster in allMonsters)
+            {
+                monster.Injured(damage);
+            }
+        }
+
         //让所有的怪物都停下
         public void StopAllMonsters()
         {
