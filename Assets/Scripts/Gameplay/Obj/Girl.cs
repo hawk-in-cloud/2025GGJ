@@ -13,7 +13,6 @@ namespace Gameplay.Obj
             health--;
             MonsterMgr.Instance.DestroyAllMonsters();
             CircleShockTrigger.Instance.TriggerCircleShock(transform);
-            EventManager.Instance.EventTrigger(E_EventType.E_GirlInjured);
             
             if (health <= 0)
             {
